@@ -1,9 +1,9 @@
-import Mail from './mail.svg'
-import Github from './github.svg'
 import Facebook from './facebook.svg'
-import Youtube from './youtube.svg'
+import Github from './github.svg'
 import Linkedin from './linkedin.svg'
+import Mail from './mail.svg'
 import Twitter from './twitter.svg'
+import Youtube from './youtube.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -31,7 +31,7 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
-        className={`fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-${size} w-${size}`}
+        className={`fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 h-${size} w-${size}`}
       />
     </a>
   )

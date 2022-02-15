@@ -1,12 +1,12 @@
 ---
-name: Tails Azimuth
+name: Haitham Gad
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+occupation: Independent Consultant
+company: Rehashly
+email: haitham@rehashly.com
+twitter: https://twitter.com/hgad
+linkedin: https://www.linkedin.com/in/haithamgad
+github: https://github.com/hgad
 ---
 
 Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.

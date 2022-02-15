@@ -1,12 +1,13 @@
-import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
-import Link from './Link'
-import SectionContainer from './SectionContainer'
-import Footer from './Footer'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
+import LogoDark from '@/data/logo-dark.svg'
+import LogoLight from '@/data/logo-light.svg'
+import siteMetadata from '@/data/siteMetadata'
 import { ReactNode } from 'react'
+import Footer from './Footer'
+import Link from './Link'
+import MobileNav from './MobileNav'
+import SectionContainer from './SectionContainer'
+import ThemeSwitch from './ThemeSwitch'
 
 interface Props {
   children: ReactNode
@@ -20,8 +21,11 @@ const LayoutWrapper = ({ children }: Props) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="mr-3">
-                  <Logo />
+                <div className="mr-3 dark:hidden">
+                  <LogoLight />
+                </div>
+                <div className="mr-3 hidden dark:block">
+                  <LogoDark />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
