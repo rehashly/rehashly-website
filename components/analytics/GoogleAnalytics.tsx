@@ -1,8 +1,7 @@
+import { siteMetadata } from '@/data/siteMetadata'
 import Script from 'next/script'
 
-import siteMetadata from '@/data/siteMetadata'
-
-const GAScript = () => {
+export function GoogleAnalytics() {
   return (
     <>
       <Script
@@ -23,8 +22,6 @@ const GAScript = () => {
     </>
   )
 }
-
-export default GAScript
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const logEvent = (action, category, label, value) => {

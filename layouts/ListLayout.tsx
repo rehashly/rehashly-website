@@ -1,17 +1,23 @@
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
+import { Link } from '@/components/Link'
+import { Pagination } from '@/components/Pagination'
+import { Tag } from '@/components/Tag'
+import { formatDate } from '@/lib/utils/formatDate'
 import { ComponentProps, useState } from 'react'
-import Pagination from '@/components/Pagination'
-import formatDate from '@/lib/utils/formatDate'
 import { PostFrontMatter } from 'types/PostFrontMatter'
-interface Props {
+
+interface ListLayoutProps {
   posts: PostFrontMatter[]
   title: string
   initialDisplayPosts?: PostFrontMatter[]
   pagination?: ComponentProps<typeof Pagination>
 }
 
-export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }: Props) {
+export function ListLayout({
+  posts,
+  title,
+  initialDisplayPosts = [],
+  pagination,
+}: ListLayoutProps) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')

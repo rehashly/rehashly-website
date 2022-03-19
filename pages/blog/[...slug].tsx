@@ -1,8 +1,8 @@
-import fs from 'fs'
-import PageTitle from '@/components/PageTitle'
-import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import { PageTitle } from '@/components/PageTitle'
+import { generateRss } from '@/lib/generate-rss'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import { writeFileSync } from 'fs'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
 import { PostFrontMatter } from 'types/PostFrontMatter'
@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps<{
   // rss
   if (allPosts.length > 0) {
     const rss = generateRss(allPosts)
-    fs.writeFileSync('./public/feed.xml', rss)
+    writeFileSync('./public/feed.xml', rss)
   }
 
   return {

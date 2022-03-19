@@ -1,11 +1,15 @@
-import Link from '@/components/Link'
+import { Link } from '@/components/Link'
+import React, { ReactElement } from 'react'
 
-interface Props {
+interface PaginationProps {
   totalPages: number
   currentPage: number
 }
 
-export default function Pagination({ totalPages, currentPage }: Props) {
+export function Pagination({
+  totalPages,
+  currentPage,
+}: PaginationProps): ReactElement<PaginationProps> {
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
 

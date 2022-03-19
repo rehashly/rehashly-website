@@ -1,8 +1,7 @@
+import { siteMetadata } from '@/data/siteMetadata'
 import Script from 'next/script'
 
-import siteMetadata from '@/data/siteMetadata'
-
-const UmamiScript = () => {
+export function Umami() {
   return (
     <>
       <Script
@@ -14,5 +13,3 @@ const UmamiScript = () => {
     </>
   )
 }
-
-export default UmamiScript

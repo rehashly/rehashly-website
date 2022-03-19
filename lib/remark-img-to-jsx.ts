@@ -1,7 +1,7 @@
-import { Parent, Node, Literal } from 'unist'
-import { visit } from 'unist-util-visit'
+import { existsSync } from 'fs'
 import sizeOf from 'image-size'
-import fs from 'fs'
+import { Literal, Node, Parent } from 'unist'
+import { visit } from 'unist-util-visit'
 
 type ImageNode = Parent & {
   url: string
@@ -10,7 +10,7 @@ type ImageNode = Parent & {
   attributes: (Literal & { name: string })[]
 }
 
-export default function remarkImgToJsx() {
+export function remarkImgToJsx() {
   return (tree: Node) => {
     visit(
       tree,
@@ -21,7 +21,7 @@ export default function remarkImgToJsx() {
         const imageNode = node.children.find((n) => n.type === 'image') as ImageNode
 
         // only local files
-        if (fs.existsSync(`${process.cwd()}/public${imageNode.url}`)) {
+        if (existsSync(`${process.cwd()}/public${imageNode.url}`)) {
           const dimensions = sizeOf(`${process.cwd()}/public${imageNode.url}`)
 
           // Convert original node to next/image

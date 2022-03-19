@@ -1,6 +1,6 @@
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 
-const formatDate = (date: string) => {
+export function formatDate(date: string) {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
@@ -10,5 +10,3 @@ const formatDate = (date: string) => {
 
   return now
 }
-
-export default formatDate

@@ -1,9 +1,10 @@
 const siteMetadata = {
-  title: 'Rehashly',
+  title: 'Rehashly - Secure your AWS footprint',
   author: 'Haitham Gad',
   headerTitle: '',
   legalName: 'Rehashly, LLC',
-  description: 'Secure your AWS footprint',
+  description:
+    'Protect your AWS assets and workloads, gain customer trust and meet compliance requirements.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://rehashly.com',
@@ -74,4 +75,4 @@ const siteMetadata = {
   },
 }
 
-module.exports = siteMetadata
+module.exports = { siteMetadata }

@@ -1,9 +1,9 @@
-import { PostFrontMatter } from 'types/PostFrontMatter'
-import fs from 'fs'
+import { readFileSync } from 'fs'
 import matter from 'gray-matter'
-import path from 'path'
+import { join } from 'path'
+import { PostFrontMatter } from 'types/PostFrontMatter'
 import { getFiles } from './mdx'
-import kebabCase from './utils/kebabCase'
+import { kebabCase } from './utils/kebabCase'
 
 const root = process.cwd()
 
@@ -13,7 +13,7 @@ export async function getAllTags(type: 'blog' | 'authors') {
   const tagCount: Record<string, number> = {}
   // Iterate through each post, putting all found tags into `tags`
   files.forEach((file) => {
-    const source = fs.readFileSync(path.join(root, 'data', type, file), 'utf8')
+    const source = readFileSync(join(root, 'data', type, file), 'utf8')
     const matterFile = matter(source)
     const data = matterFile.data as PostFrontMatter
     if (data.tags && data.draft !== true) {

@@ -1,9 +1,9 @@
-import siteMetadata from '@/data/siteMetadata'
-import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
+import { Card } from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
+import { projectsData } from '@/data/projectsData'
+import { siteMetadata } from '@/data/siteMetadata'
 
-export default function Projects() {
+export function Projects() {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />

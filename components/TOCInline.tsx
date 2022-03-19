@@ -24,14 +24,14 @@ interface TOCInlineProps {
  * }
  *
  */
-const TOCInline = ({
+export function TOCInline({
   toc,
   indentDepth = 3,
   fromHeading = 1,
   toHeading = 6,
   asDisclosure = false,
   exclude = '',
-}: TOCInlineProps) => {
+}: TOCInlineProps) {
   const re = Array.isArray(exclude)
     ? new RegExp('^(' + exclude.join('|') + ')$', 'i')
     : new RegExp('^(' + exclude + ')$', 'i')
@@ -64,5 +64,3 @@ const TOCInline = ({
     </>
   )
 }
-
-export default TOCInline

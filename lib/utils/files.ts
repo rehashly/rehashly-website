@@ -1,5 +1,5 @@
-import fs from 'fs'
-import path from 'path'
+import { readdirSync, statSync } from 'fs'
+import { join } from 'path'
 
 const pipe =
   (...fns) =>
@@ -12,12 +12,11 @@ const flattenArray = (input) =>
 const map = (fn) => (input) => input.map(fn)
 
 const walkDir = (fullPath: string) => {
-  return fs.statSync(fullPath).isFile() ? fullPath : getAllFilesRecursively(fullPath)
+  return statSync(fullPath).isFile() ? fullPath : getAllFilesRecursively(fullPath)
 }
 
-const pathJoinPrefix = (prefix: string) => (extraPath: string) => path.join(prefix, extraPath)
+const pathJoinPrefix = (prefix: string) => (extraPath: string) => join(prefix, extraPath)
 
-const getAllFilesRecursively = (folder: string): string[] =>
-  pipe(fs.readdirSync, map(pipe(pathJoinPrefix(folder), walkDir)), flattenArray)(folder)
-
-export default getAllFilesRecursively
+export function getAllFilesRecursively(folder: string): string[] {
+  return pipe(readdirSync, map(pipe(pathJoinPrefix(folder), walkDir)), flattenArray)(folder)
+}

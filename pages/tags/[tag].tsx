@@ -1,13 +1,13 @@
 import { TagSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/layouts/ListLayout'
-import generateRss from '@/lib/generate-rss'
+import { siteMetadata } from '@/data/siteMetadata'
+import { ListLayout } from '@/layouts/ListLayout'
+import { generateRss } from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
-import kebabCase from '@/lib/utils/kebabCase'
-import fs from 'fs'
+import { kebabCase } from '@/lib/utils/kebabCase'
+import { mkdirSync, writeFileSync } from 'fs'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import path from 'path'
+import { join } from 'path'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 
 const root = process.cwd()
@@ -37,9 +37,9 @@ export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[]; tag: str
   // rss
   if (filteredPosts.length > 0) {
     const rss = generateRss(filteredPosts, `tags/${tag}/feed.xml`)
-    const rssPath = path.join(root, 'public', 'tags', tag)
-    fs.mkdirSync(rssPath, { recursive: true })
-    fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
+    const rssPath = join(root, 'public', 'tags', tag)
+    mkdirSync(rssPath, { recursive: true })
+    writeFileSync(join(rssPath, 'feed.xml'), rss)
   }
 
   return { props: { posts: filteredPosts, tag } }

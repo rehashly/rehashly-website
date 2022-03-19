@@ -1,11 +1,11 @@
 /* eslint-disable react/display-name */
-import React, { useMemo } from 'react'
+import { Image } from '@/components/Image'
+import { Link } from '@/components/Link'
+import { BlogNewsletterForm } from '@/components/NewsletterForm'
+import { Pre } from '@/components/Pre'
+import { TOCInline } from '@/components/TOCInline'
 import { ComponentMap, getMDXComponent } from 'mdx-bundler/client'
-import Image from './Image'
-import CustomLink from './Link'
-import TOCInline from './TOCInline'
-import Pre from './Pre'
-import { BlogNewsletterForm } from './NewsletterForm'
+import React, { useMemo } from 'react'
 
 const Wrapper: React.ComponentType<{ layout: string }> = ({ layout, ...rest }) => {
   const Layout = require(`../layouts/${layout}`).default
@@ -16,7 +16,7 @@ export const MDXComponents: ComponentMap = {
   Image,
   //@ts-ignore
   TOCInline,
-  a: CustomLink,
+  a: Link,
   pre: Pre,
   wrapper: Wrapper,
   //@ts-ignore

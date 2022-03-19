@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
-const ThemeSwitch = () => {
+export function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
 
@@ -12,14 +12,14 @@ const ThemeSwitch = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"
+      className="ml-1 mr-1 h-8 min-h-full w-12 min-w-fit rounded p-1 sm:ml-4"
       onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
+        viewBox="0 0 30 30"
         fill="currentColor"
-        className="text-gray-900 dark:text-gray-100"
+        className="text-gray-900 hover:text-primary-600 dark:text-gray-100 dark:hover:text-primary-400"
       >
         {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
           <path
@@ -34,5 +34,3 @@ const ThemeSwitch = () => {
     </button>
   )
 }
-
-export default ThemeSwitch

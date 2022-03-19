@@ -1,9 +1,9 @@
-import { Parent } from 'unist'
-import { VFile } from 'vfile'
-import { visit } from 'unist-util-visit'
 import { load } from 'js-yaml'
+import { Parent } from 'unist'
+import { visit } from 'unist-util-visit'
+import { VFile } from 'vfile'
 
-export default function extractFrontmatter() {
+export function remarkExtractFrontmatter() {
   return (tree: Parent, file: VFile) => {
     visit(tree, 'yaml', (node: Parent) => {
       //@ts-ignore

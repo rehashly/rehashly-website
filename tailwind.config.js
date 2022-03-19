@@ -19,11 +19,19 @@ module.exports = {
         13: '3.25rem',
         14: '3.5rem',
       },
+      gridTemplateColumns: {
+        'auto-fit': 'repeat(auto-fit, minmax(0, 1fr))',
+        'auto-fill': 'repeat(auto-fill, minmax(0, 1fr))',
+      },
+      gridTemplateRows: {
+        'auto-fit': 'repeat(auto-fit, minmax(0, 1fr))',
+        'auto-fill': 'repeat(auto-fill, minmax(0, 1fr))',
+      },
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.red,
+        primary: colors.indigo,
         //@ts-ignore
         gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3
       },

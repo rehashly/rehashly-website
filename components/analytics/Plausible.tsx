@@ -1,8 +1,7 @@
+import { siteMetadata } from '@/data/siteMetadata'
 import Script from 'next/script'
 
-import siteMetadata from '@/data/siteMetadata'
-
-const PlausibleScript = () => {
+export function Plausible() {
   return (
     <>
       <Script
@@ -18,8 +17,6 @@ const PlausibleScript = () => {
     </>
   )
 }
-
-export default PlausibleScript
 
 // https://plausible.io/docs/custom-event-goals
 export const logEvent = (eventName, ...rest) => {
