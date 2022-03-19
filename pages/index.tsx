@@ -1,3 +1,4 @@
+import { ButtonLink } from '@/components/ButtonLink'
 import { Image } from '@/components/Image'
 import { InvertibleImage } from '@/components/InvertibleImage'
 import { LandingParagraph } from '@/components/LandingParagraph'
@@ -27,7 +28,9 @@ export default function Home() {
                 meet compliance requirements.
               </LandingParagraph>
               <div className="flex justify-center xl:justify-start">
-                <TextLink className="mt-5" href="https://calendly.com/hgad/30min" />
+                <ButtonLink className="mt-5" href="https://calendly.com/hgad/30min">
+                  Schedule a free call
+                </ButtonLink>
               </div>
             </div>
             <div className="order-2">
