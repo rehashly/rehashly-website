@@ -8,7 +8,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://rehashly.com',
-  siteRepo: 'https://github.com/rehashly/rehashly.com',
+  siteRepo: 'https://github.com/rehashly/rehashly-website',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/social-banner.png',

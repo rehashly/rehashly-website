@@ -3,7 +3,7 @@ import { PageSEO } from '@/components/SEO'
 import { projectsData } from '@/data/projectsData'
 import { siteMetadata } from '@/data/siteMetadata'
 
-export function Projects() {
+export default function Projects() {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
