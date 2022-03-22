@@ -2,28 +2,16 @@
 
 # Rehashly's Website
 
-Based on [Timothy Lin's Tailwind Next.js Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+Based on [Timothy Lin's Tailwind Next.js Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog).
 
 ## Quick Start Guide
 
-1. JS (official support)
-
-```bash
-npx degit https://github.com/timlrx/tailwind-nextjs-starter-blog.git
-```
-
-or with TypeScript (community support)
-
-```bash
-npx degit timlrx/tailwind-nextjs-starter-blog#typescript
-```
-
-2. Personalize `siteMetadata.js` (site related information)
-3. Personalize `authors/default.md` (main author)
-4. Modify `projectsData.js`
-5. Modify `headerNavLinks.js` to customize navigation links
-6. Add blog posts
-7. Deploy on Vercel
+1. Personalize `siteMetadata.js` (site related information)
+2. Personalize `authors/default.md` (main author)
+3. Modify `projectsData.js`
+4. Modify `headerNavLinks.js` to customize navigation links
+5. Add blog posts
+6. Deploy on Vercel
 
 ## Installation
 
