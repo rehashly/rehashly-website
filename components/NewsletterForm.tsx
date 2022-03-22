@@ -39,7 +39,7 @@ export function NewsletterForm({ title = '' }) {
       <div className="mb-2 w-96 max-w-fit pb-1 text-lg font-semibold text-gray-800 dark:text-gray-100">
         {title}
       </div>
-      <form className="flex flex-row" onSubmit={subscribe}>
+      <form className="flex flex-col sm:flex-row" onSubmit={subscribe}>
         <div>
           <label className="sr-only" htmlFor="email-input">
             Email address
@@ -57,7 +57,7 @@ export function NewsletterForm({ title = '' }) {
           />
         </div>
         <Button
-          className="ml-3"
+          className="mt-3 sm:mt-0 sm:ml-3"
           type="submit"
           disabled={subscribed}
           enabledText="Sign up"
