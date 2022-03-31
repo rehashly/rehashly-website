@@ -24,8 +24,8 @@ export default function Home() {
                 {heroMessage}
               </h2>
               <LandingParagraph>
-                I help businesses protect their AWS assets and workloads, gain customer trust and
-                meet compliance requirements.
+                I help businesses build secure infrastructure and launch features and services
+                confidently on AWS.
               </LandingParagraph>
               <div className="flex justify-center xl:justify-start">
                 <ButtonLink className="mt-5" href="https://calendly.com/hgad/30min">
@@ -57,12 +57,19 @@ export default function Home() {
                 About me
               </h2>
               <LandingParagraph className="mb-6">
-                Hi there 👋 , I'm Haitham Gad, an Ex-AWS engineer turned security consultant.
+                Hi there 👋 , this is Haitham Gad.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
-                At AWS, I helped build{' '}
-                <TextLink href="https://aws.amazon.com/guardduty">Amazon GuardDuty</TextLink> and
-                led its AppSec engagements and compliance efforts end-to-end.
+                Before starting Rehashly, I was a Software Engineer for 15+ years. I spent the last
+                5+ years at AWS, where I helped build and grow{' '}
+                <TextLink href="https://aws.amazon.com/guardduty">Amazon GuardDuty</TextLink>, an
+                AWS security service that has become an indispensible tool in the hands of SecOps
+                teams. Moreover, I was responsible for leading all of GuardDuty's AppSec engagements
+                and compliance efforts.
+              </LandingParagraph>
+              <LandingParagraph className="mb-6">
+                I will use my experience building and securing an AWS service to make sure you ship
+                secure code that runs on secure AWS infrastructure.
               </LandingParagraph>
               <LandingParagraph className="my-8 xl:text-center">
                 <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
