@@ -24,7 +24,7 @@ export default function Home() {
                 {heroMessage}
               </h2>
               <LandingParagraph>
-                I help businesses build secure infrastructure and launch features and services
+                I help businesses build secure infrastructure and ship secure features and services
                 confidently on AWS.
               </LandingParagraph>
               <div className="flex justify-center xl:justify-start">
@@ -63,13 +63,13 @@ export default function Home() {
                 Before starting Rehashly, I was a Software Engineer for 15+ years. I spent the last
                 5+ years at AWS, where I helped build and grow{' '}
                 <TextLink href="https://aws.amazon.com/guardduty">Amazon GuardDuty</TextLink>, an
-                AWS security service that has become an indispensible tool in the hands of SecOps
-                teams. Moreover, I was responsible for leading all of GuardDuty's AppSec engagements
-                and compliance efforts.
+                AWS threat detection service that has become an indispensible tool in the hands of
+                SecOps teams. Moreover, I was responsible for leading all of GuardDuty's AppSec
+                engagements and compliance efforts.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
-                I will use my experience building and securing an AWS service to make sure you ship
-                secure code that runs on secure AWS infrastructure.
+                I will use my experience building and securing an AWS service to make sure you
+                confidently ship secure features and services on AWS.
               </LandingParagraph>
               <LandingParagraph className="my-8 xl:text-center">
                 <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
