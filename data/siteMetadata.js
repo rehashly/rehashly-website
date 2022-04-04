@@ -1,10 +1,9 @@
 const siteMetadata = {
-  title: 'Rehashly - Secure your AWS footprint',
+  title: 'Rehashly | Ship well-architected AWS solutions, fast',
   author: 'Haitham Gad',
   headerTitle: '',
   legalName: 'Rehashly, LLC',
-  description:
-    'Protect your AWS assets and workloads, gain customer trust and meet compliance requirements.',
+  description: 'Build and ship resilient, secure and cost-optimized solutions on AWS.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://rehashly.com',
