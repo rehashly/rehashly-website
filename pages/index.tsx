@@ -2,15 +2,12 @@ import { ButtonLink } from '@/components/ButtonLink'
 import { Image } from '@/components/Image'
 import { InvertibleImage } from '@/components/InvertibleImage'
 import { LandingParagraph } from '@/components/LandingParagraph'
-import { NewsletterForm } from '@/components/NewsletterForm'
 import { Recommendation } from '@/components/Recommendation'
 import { PageSEO } from '@/components/SEO'
 import { TextLink } from '@/components/TextLink'
 import { siteMetadata } from '@/data/siteMetadata'
 
 export default function Home() {
-  const heroMessage = 'Ship well-architected AWS solutions, fast.'
-
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -19,21 +16,19 @@ export default function Home() {
           <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-20 pt-20 xl:grid-cols-2">
             <div className="order-1">
               <h2 className="mb-6 text-center text-5xl font-extrabold xl:text-left xl:text-6xl">
-                {heroMessage}
+                Build AWS solutions the way AWS does it.
               </h2>
-              <LandingParagraph>
+              <LandingParagraph className="mb-5">
                 Get help building and shipping resilient, secure and cost-optimized solutions on
                 AWS; from an Ex-AWS engineer.
               </LandingParagraph>
               <div className="flex justify-center xl:justify-start">
-                <ButtonLink className="mt-5" href="https://calendly.com/hgad/30min">
-                  Schedule a free call
-                </ButtonLink>
+                <ButtonLink href="https://calendly.com/hgad/30min">Schedule a free call</ButtonLink>
               </div>
             </div>
             <div className="order-2">
               <InvertibleImage
-                alt={heroMessage}
+                alt="Well-architected AWS solutions."
                 lightSrc="/static/images/hero-light.svg"
                 darkSrc="/static/images/hero-dark.svg"
                 className="object-fill object-center"
@@ -52,22 +47,40 @@ export default function Home() {
             </div>
             <div className="order-3 xl:order-4">
               <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
-                About me
+                About me.
               </h2>
               <LandingParagraph className="mb-6">
-                Hi there 👋 , this is Haitham Gad.
+                Hi there 👋 , this is Haitham Gad, a 15+ years software engineering veteran.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
-                Before starting Rehashly, I've been building software for 15+ years; the last 5+ of
-                which at AWS, where I helped build and grow{' '}
-                <TextLink href="https://aws.amazon.com/guardduty">Amazon GuardDuty</TextLink> into
-                an indispensible threat detection service in the hands of SecOps teams.
+                Before starting Rehashly, I spent 5+ years building, shipping and operating services
+                at AWS, where I constantly upheld AWS's highest standards of service reliability,
+                security and operational excellence.
+              </LandingParagraph>
+              <LandingParagraph>
+                I will use this experience to help you ship reliable, secure and operationally-sound
+                solutions on AWS.
+              </LandingParagraph>
+            </div>
+            <div className="order-5">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+                Security baked-in.
+              </h2>
+              <LandingParagraph className="mb-6">
+                Security is priority zero at AWS. It's also my deepest obsession.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
-                I will use my experience building, launching and operating an AWS service to help
-                you ship reliable, secure and operationally-sound solutions on AWS.
+                Besides building and operating an{' '}
+                <TextLink href="https://aws.amazon.com/guardduty/">AWS security service</TextLink>,
+                I ran an AppSec review acceleration program where I wrote and reviewed numerous
+                threat models and led many compliance efforts and SecOps engagements.
               </LandingParagraph>
-              <LandingParagraph className="my-8 xl:text-center">
+              <LandingParagraph className="mb-6">
+                I will use this experience to help you build solutions that protect your sensitive
+                data at rest and in transit, enforce least privilege access to resources, and ensure
+                proper handling of untrusted user input.
+              </LandingParagraph>
+              <LandingParagraph className="mt-8 xl:text-center">
                 <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
                   <Image
                     alt="AWS Security Specialty Certification"
@@ -77,26 +90,6 @@ export default function Home() {
                     height={150}
                   />
                 </TextLink>
-              </LandingParagraph>
-            </div>
-            <div className="order-5">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
-                Security from the outset
-              </h2>
-              <LandingParagraph className="mb-6">
-                Security is priority zero. Don't get breached because of a resource misconfiguration
-                or improper handling of user input.
-              </LandingParagraph>
-              <LandingParagraph className="mb-6">
-                At AWS, I ran an AppSec review acceleration program where I wrote and reviewed
-                numerous threat models. I also led many compliance efforts and SecOps engagements as
-                part of this role. As such, I'm intimiately familiar with a wide range of AWS attack
-                vectors and mitigation strategies.
-              </LandingParagraph>
-              <LandingParagraph className="mb-6">
-                I will use this experience to build solutions that protect your sensitive data at
-                rest and in transit, enforce least privilege access to resources, and ensure proper
-                handling of untrusted user input.
               </LandingParagraph>
             </div>
             <div className="order-6">
@@ -109,13 +102,92 @@ export default function Home() {
                 height={350}
               />
             </div>
+            <div className="order-8 xl:order-7">
+              <InvertibleImage
+                alt="AWS cost optimization"
+                lightSrc="/static/images/aws-cost-optimization-light.svg"
+                darkSrc="/static/images/aws-cost-optimization-dark.svg"
+                className="object-fill object-center"
+                width={350}
+                height={250}
+              />
+            </div>
+            <div className="order-7 xl:order-8">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+                Robust solutions that don't break the bank.
+              </h2>
+              <LandingParagraph className="mb-6">
+                Infrastructure cost can make or break a design. Every new infrastructure expense
+                directly impacts your P&L.
+              </LandingParagraph>
+              <LandingParagraph className="mb-6">
+                At AWS, I helped reduce infrastructure spend, at times by more than $60K/month.
+              </LandingParagraph>
+              <LandingParagraph>
+                I will use this experience to help you build robust cost-optimized solutions that
+                scale gracefully in terms of cost.
+              </LandingParagraph>
+            </div>
           </div>
           <div className="mt-20">
             <h2 className="mb-8 text-center text-4xl font-extrabold xl:text-5xl">Reviews</h2>
             <Recommendation
-              author="Shane Pereira"
-              position="Principal Engineer"
+              author="Arun Prabakaran"
+              position="Senior Software Engineer"
               company="AWS"
+              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+            >
+              I worked with Haitham on Amazon GuardDuty. Haitham is a strong engineer who insists on
+              highest standards. It was remarkable how he implemented a feature involving
+              organization of multiple AWS accounts in a short span of time during the early stages
+              of GuardDuty, which is being used by multiple other AWS teams and sets an example for
+              insisting on highest standards for other features. He played a big role in AppSec
+              reviews for other feature launches as well. Haitham is very strong in AWS fundamentals
+              and is easy to work with.
+            </Recommendation>
+            <Recommendation
+              author="Rashmi Giridhara"
+              position="Software Development Engineer"
+              company="AWS"
+              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+            >
+              I worked with Haitham for over 3 years on AWS GuardDuty, since 2018. Haitham is an
+              experienced software developer with strong foundation of cloud services. He worked on
+              leading and implementing several aspects of GuardDuty, few of which include multi
+              account feature, API/CloudFormation support for GuardDuty resources. In addition to
+              this he lead the AppSec review for new feature launches which showcased his expertise
+              and passion for security. He was a go-to engineer on the team for security review of
+              existing and new services. Haitham's knowledge on system design made him a good
+              teammate to bounce ideas off and he is easy to work with.
+            </Recommendation>
+            <Recommendation
+              author="Subramanian Kaleeswaran"
+              position="Software Development Engineer"
+              company="AWS"
+              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+            >
+              I worked with Haitham while building up AWS GuardDuty. Haitham is very independent and
+              very easy to work with. Haitham held a high bar for security when building software
+              and worked across teams to keep it. Haitham made sure our software architecture and
+              code was secure. His experience with securing cloud architectures, infrastructure and
+              pretty much securing anything in AWS is invaluable!
+            </Recommendation>
+            <Recommendation
+              author="Sunu Mathew"
+              position="Senior Software Engineer"
+              company="AWS"
+              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+            >
+              Haitham is a strong and experienced engineer with a passion for securing cloud
+              applications. He played a pivotal role over several years in securing GuardDuty's AWS
+              infrastructure using best practices and leading AppSec review efforts for new feature
+              launches. He has great judgement and makes the right choices in evaluating and
+              addressing application security aspects associated with large software projects.
+            </Recommendation>
+            <Recommendation
+              author="Shane Pereira"
+              position="Partner Software Architect"
+              company="Microsoft"
               link="https://www.linkedin.com/in/haithamgad/details/recommendations"
             >
               I worked with Haitham for over 4 years on Amazon GuardDuty, a threat detection service
@@ -142,66 +214,7 @@ export default function Home() {
               positions with the most senior engineers at Amazon. It also requires a combination of
               a high-level understanding of the overall architecture of the entire service, as well
               as the ability to dive as deep into a variety of security technologies and processes
-              when needed. In this responsibility as an AppSec Guardian, he educated engineers on
-              threat modeling and ensured they have mitigations (or plans for mitigations) to the
-              most common issues probed by AppSec. In the AppSec review meetings, Haitham helps the
-              AppSec engineer understand the context of the new feature (where it fits in the larger
-              GuardDuty architecture), any concerning or unconventional design choices and the
-              reasoning behind them. Haitham also helps GuardDuty engineers understand AppSec's
-              concerns and the effective ways to mitigate them.
-            </Recommendation>
-            <Recommendation
-              author="Sunu Mathew"
-              position="Senior Software Engineer"
-              company="AWS"
-              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-            >
-              Haitham is a strong and experienced engineer with a passion for securing cloud
-              applications. He played a pivotal role over several years in securing GuardDuty's AWS
-              infrastructure using best practices and leading AppSec review efforts for new feature
-              launches. He has great judgement and makes the right choices in evaluating and
-              addressing application security aspects associated with large software projects.
-            </Recommendation>
-            <Recommendation
-              author="Arun Prabakaran"
-              position="Senior Software Engineer"
-              company="AWS"
-              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-            >
-              I worked with Haitham on Amazon GuardDuty. Haitham is a strong engineer who insists on
-              highest standards. It was remarkable how he implemented a feature involving
-              organization of multiple AWS accounts in a short span of time during the early stages
-              of GuardDuty, which is being used by multiple other AWS teams and sets an example for
-              insisting on highest standards for other features. He played a big role in AppSec
-              reviews for other feature launches as well. Haitham is very strong in AWS fundamentals
-              and is easy to work with.
-            </Recommendation>
-            <Recommendation
-              author="Subramanian Kaleeswaran"
-              position="Software Development Engineer"
-              company="AWS"
-              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-            >
-              I worked with Haitham while building up AWS GuardDuty. Haitham is very independent and
-              very easy to work with. Haitham held a high bar for security when building software
-              and worked across teams to keep it. Haitham made sure our software architecture and
-              code was secure. His experience with securing cloud architectures, infrastructure and
-              pretty much securing anything in AWS is invaluable!
-            </Recommendation>
-            <Recommendation
-              author="Rashmi Giridhara"
-              position="Software Development Engineer"
-              company="AWS"
-              link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-            >
-              I worked with Haitham for over 3 years on AWS GuardDuty, since 2018. Haitham is an
-              experienced software developer with strong foundation of cloud services. He worked on
-              leading and implementing several aspects of GuardDuty, few of which include multi
-              account feature, API/CloudFormation support for GuardDuty resources. In addition to
-              this he lead the AppSec review for the new feature launches which showcased his
-              expertise and passion for security. He was a go-to engineer on the team for security
-              review of existing and new services. Haitham's knowledge on system design made him a
-              good teammate to bounce ideas off and he is easy to work with.
+              when needed.
             </Recommendation>
             <Recommendation
               author="Conor Lorsung"
@@ -220,9 +233,11 @@ export default function Home() {
               building make him a pleasure to work with, and an invaluable teammate.
             </Recommendation>
           </div>
+          {/*
           <div className="flex items-center justify-center pt-20">
             <NewsletterForm title="Subscribe for practical advice on securing your data and workloads on AWS" />
           </div>
+          */}
         </div>
       )}
     </>
