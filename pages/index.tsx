@@ -117,16 +117,45 @@ export default function Home() {
                 Robust solutions that don't break the bank.
               </h2>
               <LandingParagraph className="mb-6">
-                Infrastructure cost can make or break a design. Every new infrastructure expense
-                directly impacts your P&L.
+                Infrastructure costs can make or break a solution design. Every new infrastructure
+                expense directly impacts your P&L.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
-                At AWS, I helped reduce infrastructure spend, at times by more than $60K/month.
+                At AWS, I helped reduce infrastructure spend, at times by more than $60K/month by
+                leveraging serverless architectures and optimizing compute and network egress costs.
               </LandingParagraph>
               <LandingParagraph>
                 I will use this experience to help you build robust cost-optimized solutions that
                 scale gracefully in terms of cost.
               </LandingParagraph>
+            </div>
+            <div className="order-9">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+                Start small. Scale indefinitely.
+              </h2>
+              <LandingParagraph className="mb-6">
+                Resilient scalable designs allow room for growth and can gracefully handle sudden
+                load spikes.
+              </LandingParagraph>
+              <LandingParagraph className="mb-6">
+                At AWS, I built and operated event-driven services that autoscales to handle
+                millions of events and automatically release capacity when load subsides to avoid
+                incurring unnecessary costs.
+              </LandingParagraph>
+              <LandingParagraph className="mb-6">
+                I will use this experience to help you build resilient scalable solutions that
+                ensure business continuity under unexpected load spikes.
+              </LandingParagraph>
+            </div>
+            <div className="order-10">
+              <InvertibleImage
+                alt="Security from the outset"
+                lightSrc="/static/images/aws-scale-light.svg"
+                darkSrc="/static/images/aws-scale-dark.svg"
+                className="object-fill object-center"
+                width={450}
+                height={350}
+              />
             </div>
           </div>
           <div className="mt-20">
