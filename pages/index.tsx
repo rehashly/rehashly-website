@@ -46,7 +46,7 @@ export default function Home() {
               />
             </div>
             <div className="order-3 xl:order-4">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
                 About me.
               </h2>
               <LandingParagraph className="mb-6">
@@ -63,7 +63,7 @@ export default function Home() {
               </LandingParagraph>
             </div>
             <div className="order-5">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
                 Security baked-in.
               </h2>
               <LandingParagraph className="mb-6">
@@ -114,7 +114,7 @@ export default function Home() {
               />
             </div>
             <div className="order-7 xl:order-8">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
                 Robust solutions that don't break the bank.
               </h2>
               <LandingParagraph className="mb-6">
@@ -134,7 +134,7 @@ export default function Home() {
               </LandingParagraph>
             </div>
             <div className="order-9">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
                 Start small. Scale indefinitely.
               </h2>
               <LandingParagraph className="mb-6">
@@ -172,7 +172,7 @@ export default function Home() {
               />
             </div>
             <div className="order-11 xl:order-12">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
                 Raise the operational excellence bar.
               </h2>
               <LandingParagraph className="mb-6">
@@ -191,7 +191,9 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-20">
-            <h2 className="mb-8 text-center text-4xl font-extrabold xl:text-5xl">Reviews</h2>
+            <h2 className="mb-8 text-center text-4xl font-extrabold xl:mt-8 xl:text-5xl">
+              Reviews
+            </h2>
             <Recommendation
               author="Arun Prabakaran"
               position="Senior Software Engineer"
