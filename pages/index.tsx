@@ -14,7 +14,7 @@ export default function Home() {
       {siteMetadata.newsletter.provider !== '' && (
         <div>
           <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-20 pt-20 xl:grid-cols-2">
-            <div className="order-1">
+            <div className="order-1 xl:my-40">
               <h2 className="mb-6 text-center text-5xl font-extrabold xl:text-left xl:text-6xl">
                 Build AWS solutions the way AWS does it.
               </h2>
@@ -73,7 +73,8 @@ export default function Home() {
                 Besides building and operating an{' '}
                 <TextLink href="https://aws.amazon.com/guardduty/">AWS security service</TextLink>,
                 I ran an AppSec review acceleration program where I wrote and reviewed numerous
-                threat models and led many compliance efforts and SecOps engagements.
+                threat models and incident response runbooks and led plenty of AppSec, compliance
+                and SecOps engagements.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
                 I will use this experience to help you build solutions that protect your sensitive
@@ -95,8 +96,8 @@ export default function Home() {
             <div className="order-6">
               <InvertibleImage
                 alt="Security from the outset"
-                lightSrc="/static/images/security-light.svg"
-                darkSrc="/static/images/security-dark.svg"
+                lightSrc="/static/images/aws-security-light.svg"
+                darkSrc="/static/images/aws-security-dark.svg"
                 className="object-fill object-center"
                 width={450}
                 height={350}
@@ -117,8 +118,11 @@ export default function Home() {
                 Robust solutions that don't break the bank.
               </h2>
               <LandingParagraph className="mb-6">
-                Infrastructure costs can make or break a solution design. Every new infrastructure
-                expense directly impacts your P&L.
+                It is estimated that businesses{' '}
+                <TextLink href="https://www.infoworld.com/article/3543754/during-covid-19-wasting-30-percent-of-cloud-spend-is-not-ok.html">
+                  waste 30% of their cloud spend
+                </TextLink>
+                . Infrastructure costs can literally make or break a solution design.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
                 At AWS, I helped reduce infrastructure spend, at times by more than $60K/month by
@@ -134,16 +138,16 @@ export default function Home() {
                 Start small. Scale indefinitely.
               </h2>
               <LandingParagraph className="mb-6">
-                Resilient scalable designs allow room for growth and can gracefully handle sudden
-                load spikes.
+                Resilient and scalable designs allow room for growth and can gracefully handle
+                sudden load spikes.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
-                At AWS, I built and operated event-driven services that autoscales to handle
-                millions of events and automatically release capacity when load subsides to avoid
-                incurring unnecessary costs.
+                At AWS, I built and operated event-driven services that autoscale to handle millions
+                of events and automatically release capacity when load subsides to avoid incurring
+                unnecessary costs.
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
-                I will use this experience to help you build resilient scalable solutions that
+              <LandingParagraph>
+                I will use this experience to help you build resilient and scalable solutions that
                 ensure business continuity under unexpected load spikes.
               </LandingParagraph>
             </div>
@@ -156,6 +160,34 @@ export default function Home() {
                 width={450}
                 height={350}
               />
+            </div>
+            <div className="order-12 xl:order-11">
+              <InvertibleImage
+                alt="AWS operational excellence"
+                lightSrc="/static/images/aws-operational-excellence-light.svg"
+                darkSrc="/static/images/aws-operational-excellence-dark.svg"
+                className="object-fill object-center"
+                width={400}
+                height={400}
+              />
+            </div>
+            <div className="order-11 xl:order-12">
+              <h2 className="mb-6 text-center text-4xl font-extrabold xl:text-left xl:text-5xl">
+                Raise the operational excellence bar.
+              </h2>
+              <LandingParagraph className="mb-6">
+                You can't fix what you can't see. In-depth observability, CI/CD pipelines, alerts
+                and automatic rollbacks are non-negotiable in an operationally-sound design.
+              </LandingParagraph>
+              <LandingParagraph className="mb-6">
+                At AWS, I built many microservices, with in-depth logging, monitoring and alerting.
+                I wrote plenty of unit tests, integration tests, canary tests and runbooks, and
+                implemented a lot of CI/CD deployment pipelines with automatic rollbacks.
+              </LandingParagraph>
+              <LandingParagraph>
+                I will use this experience to help you build production-grade operationally-ready
+                AWS solutions with well-documented operational runbooks.
+              </LandingParagraph>
             </div>
           </div>
           <div className="mt-20">

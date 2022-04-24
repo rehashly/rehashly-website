@@ -5,7 +5,7 @@ const siteMetadata = {
   legalName: 'Rehashly, LLC',
   description: 'Build and ship resilient, secure and cost-optimized solutions on AWS.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://rehashly.com',
   siteRepo: 'https://github.com/rehashly/rehashly-website',
   siteLogo: '/static/images/logo.png',
