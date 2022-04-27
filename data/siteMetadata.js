@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://rehashly.com',
   siteRepo: 'https://github.com/rehashly/rehashly-website',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/haitham.png',
   socialBanner: '/static/images/social-banner.png',
   email: 'hello@rehashly.com',
   github: 'https://github.com/rehashly',

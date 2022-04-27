@@ -19,11 +19,13 @@ export default function Home() {
                 Build AWS solutions the way AWS does it.
               </h2>
               <LandingParagraph className="mb-5">
-                Get help building and shipping resilient, secure and cost-optimized solutions on
-                AWS; from an Ex-AWS engineer.
+                Get help building resilient, secure and cost-optimized AWS solutions from an Ex-AWS
+                engineer.
               </LandingParagraph>
               <div className="flex justify-center xl:justify-start">
-                <ButtonLink href="https://calendly.com/hgad/30min">Schedule a free call</ButtonLink>
+                <ButtonLink href="https://calendly.com/hgad/30min">
+                  Schedule a free consultation
+                </ButtonLink>
               </div>
             </div>
             <div className="order-2">
@@ -39,7 +41,7 @@ export default function Home() {
             <div className="order-4 xl:order-3">
               <Image
                 alt="Haitham Gad"
-                src="/static/images/haithamgad.jpg"
+                src="/static/images/haitham.png"
                 className="mb-0 rounded-full object-fill object-center"
                 width={350}
                 height={350}

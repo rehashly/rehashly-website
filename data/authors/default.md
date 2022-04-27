@@ -1,6 +1,6 @@
 ---
 name: Haitham Gad
-avatar: /static/images/avatar.png
+avatar: /static/images/haitham.png
 occupation: Independent Consultant
 company: Rehashly
 email: haitham@rehashly.com
