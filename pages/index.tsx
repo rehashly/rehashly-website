@@ -13,7 +13,7 @@ export default function Home() {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       {siteMetadata.newsletter.provider !== '' && (
         <div>
-          <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-20 pt-20 xl:mt-[6vh] xl:mb-64 xl:grid-cols-2 xl:gap-y-64">
+          <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-20 pt-20 xl:mt-[7vh] xl:mb-64 xl:grid-cols-2 xl:gap-y-64">
             <div className="order-1">
               <h2 className="mb-6 text-center text-5xl font-extrabold xl:text-left xl:text-6xl">
                 Build AWS solutions the way AWS does it.
