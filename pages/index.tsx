@@ -13,8 +13,8 @@ export default function Home() {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       {siteMetadata.newsletter.provider !== '' && (
         <div>
-          <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-20 pt-20 xl:grid-cols-2">
-            <div className="order-1 xl:my-40">
+          <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-20 pt-20 xl:mt-[6vh] xl:mb-64 xl:grid-cols-2 xl:gap-y-64">
+            <div className="order-1">
               <h2 className="mb-6 text-center text-5xl font-extrabold xl:text-left xl:text-6xl">
                 Build AWS solutions the way AWS does it.
               </h2>
@@ -55,9 +55,9 @@ export default function Home() {
                 Hi there 👋 , this is Haitham Gad, a 15+ years software engineering veteran.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
-                Before starting Rehashly, I spent 5+ years building, shipping and operating services
-                at AWS, where I constantly upheld AWS's highest standards of service reliability,
-                security and operational excellence.
+                Before starting Rehashly, I spent 5+ years at AWS building and operating AWS
+                services with strong requirements on security, reliability, scalability and
+                operational excellence.
               </LandingParagraph>
               <LandingParagraph>
                 I will use this experience to help you ship reliable, secure and operationally-sound
@@ -69,7 +69,7 @@ export default function Home() {
                 Security baked-in.
               </h2>
               <LandingParagraph className="mb-6">
-                Security is priority zero at AWS. It's also my deepest obsession.
+                Security is priority zero. It's also my deepest obsession.
               </LandingParagraph>
               <LandingParagraph className="mb-6">
                 Besides building and operating an{' '}
@@ -78,12 +78,7 @@ export default function Home() {
                 threat models and incident response runbooks and led plenty of AppSec, compliance
                 and SecOps engagements.
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
-                I will use this experience to help you build solutions that protect your sensitive
-                data at rest and in transit, enforce least privilege access to resources, and ensure
-                proper handling of untrusted user input.
-              </LandingParagraph>
-              <LandingParagraph className="mt-8 xl:text-center">
+              <LandingParagraph className="my-7 xl:text-center">
                 <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
                   <Image
                     alt="AWS Security Specialty Certification"
@@ -93,6 +88,11 @@ export default function Home() {
                     height={150}
                   />
                 </TextLink>
+              </LandingParagraph>
+              <LandingParagraph className="mb-6">
+                I will use this experience to help you build solutions that protect your sensitive
+                data at rest and in transit, enforce least privilege access to resources, and ensure
+                proper handling of untrusted user input.
               </LandingParagraph>
             </div>
             <div className="order-6">
