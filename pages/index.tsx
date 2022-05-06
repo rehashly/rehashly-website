@@ -23,7 +23,7 @@ export default function Home() {
                 engineer.
               </LandingParagraph>
               <div className="flex justify-center xl:justify-start">
-                <ButtonLink href="https://calendly.com/hgad/30min">
+                <ButtonLink href="https://calendly.com/hgad/consultation">
                   Schedule a free consultation
                 </ButtonLink>
               </div>
