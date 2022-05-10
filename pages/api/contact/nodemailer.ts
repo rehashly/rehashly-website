@@ -1,0 +1,45 @@
+import { NextApiRequest, NextApiResponse } from 'next'
+import * as nodemailer from 'nodemailer'
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const { name, email, message } = req.body
+  if (!name) {
+    return res.status(400).json({ error: 'Name is required' })
+  }
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' })
+  }
+
+  if (!message) {
+    return res.status(400).json({ error: 'Message is required' })
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        type: 'OAuth2',
+        user: 'haitham@rehashly.com',
+        clientId: process.env.GCP_CONTACT_BOT_CLIENT_ID,
+        clientSecret: process.env.GCP_CONTACT_BOT_CLIENT_SECRET,
+        refreshToken: process.env.GCP_CONTACT_BOT_REFRESH_TOKEN,
+      },
+    })
+
+    transporter.sendMail({
+      from: `${name} <${email}>`,
+      to: 'haitham@rehashly.com',
+      replyTo: email,
+      subject: `Message from ${name}`,
+      text: message,
+    })
+
+    return res.status(201).json({ error: '' })
+  } catch (error) {
+    return res.status(500).json({ error: error.message || error.toString() })
+  }
+}

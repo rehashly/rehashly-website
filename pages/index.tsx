@@ -1,6 +1,8 @@
 import { ButtonLink } from '@/components/ButtonLink'
+import { ContactForm } from '@/components/ContactForm'
 import { Image } from '@/components/Image'
 import { InvertibleImage } from '@/components/InvertibleImage'
+import { LandingH1, LandingH2, LandingH3 } from '@/components/LandingHeading'
 import { LandingParagraph } from '@/components/LandingParagraph'
 import { Recommendation } from '@/components/Recommendation'
 import { PageSEO } from '@/components/SEO'
@@ -15,17 +17,13 @@ export default function Home() {
         <div>
           <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-20 pt-20 xl:mt-[7vh] xl:mb-64 xl:grid-cols-2 xl:gap-y-64">
             <div className="order-1">
-              <h2 className="mb-6 text-center text-5xl font-extrabold xl:text-left xl:text-6xl">
-                Build AWS solutions the way AWS does it.
-              </h2>
-              <LandingParagraph className="mb-5">
-                Get help building resilient, secure and cost-optimized AWS solutions from an Ex-AWS
+              <LandingH1>Build AWS solutions the way AWS does it.</LandingH1>
+              <LandingParagraph className="mb-5 text-center">
+                Get help building resilient, secure and cost-optimized AWS solutions from an ex-AWS
                 engineer.
               </LandingParagraph>
               <div className="flex justify-center xl:justify-start">
-                <ButtonLink href="https://calendly.com/hgad/consultation">
-                  Schedule a free consultation
-                </ButtonLink>
+                <ButtonLink href="#contact">Get in touch</ButtonLink>
               </div>
             </div>
             <div className="order-2">
@@ -48,37 +46,48 @@ export default function Home() {
               />
             </div>
             <div className="order-3 xl:order-4">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
-                About me.
-              </h2>
-              <LandingParagraph className="mb-6">
+              <LandingH2 id="about">About me</LandingH2>
+              <LandingParagraph>
                 Hi there 👋 , this is Haitham Gad, a 15+ years software engineering veteran.
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
+              <LandingParagraph>
                 Before starting Rehashly, I spent 5+ years at AWS building and operating AWS
                 services with strong requirements on security, reliability, scalability and
                 operational excellence.
               </LandingParagraph>
-              <LandingParagraph>
-                I will use this experience to help you ship reliable, secure and operationally-sound
-                solutions on AWS.
+              <LandingParagraph className="mb-0">
+                I help businesses accelerate value delivery, reduce infrastructure cost, improve
+                their security posture and achieve operational excellence by utilizing the right mix
+                of AWS technologies.
               </LandingParagraph>
             </div>
             <div className="order-5">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
-                Security baked-in.
-              </h2>
-              <LandingParagraph className="mb-6">
-                Security is priority zero. It's also my deepest obsession.
+              <LandingH2>Security in-depth</LandingH2>
+              <LandingParagraph>
+                When done right, data and workloads are more secure in the cloud than on-prem.
+                However, without the right experience, security in the cloud can be tricky. Resource
+                misconfigurations and integration anti-patterns can leave your infrastructure
+                exposed.
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
-                Besides building and operating an{' '}
-                <TextLink href="https://aws.amazon.com/guardduty/">AWS security service</TextLink>,
-                I ran an AppSec review acceleration program where I wrote and reviewed numerous
-                threat models and incident response runbooks and led plenty of AppSec, compliance
-                and SecOps engagements.
+              <LandingH3>Builder with a security focus</LandingH3>
+              <LandingParagraph>
+                I built and operated{' '}
+                <TextLink href="https://aws.amazon.com/guardduty/">
+                  an AWS security service
+                </TextLink>{' '}
+                for more than 5 years. I also led many compliance efforts (including GDPR, HIPAA,
+                SOC 2 and FedRAMP) and SecOps engagements.
               </LandingParagraph>
-              <LandingParagraph className="my-7 xl:text-center">
+              <LandingH3>Expert at threat modeling</LandingH3>
+              <LandingParagraph>
+                I led an AppSec review acceleration program where I wrote and reviewed numerous
+                threat models and worked closely with AppSec to mitigate uncovered attack vectors.
+              </LandingParagraph>
+              <LandingH3>Certified security specialist</LandingH3>
+              <LandingParagraph>
+                I've been certified by AWS in the security specialty.
+              </LandingParagraph>
+              <LandingParagraph className="my-7 text-center xl:text-center">
                 <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
                   <Image
                     alt="AWS Security Specialty Certification"
@@ -89,10 +98,10 @@ export default function Home() {
                   />
                 </TextLink>
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
-                I will use this experience to help you build solutions that protect your sensitive
-                data at rest and in transit, enforce least privilege access to resources, and ensure
-                proper handling of untrusted user input.
+              <LandingParagraph>
+                I will help you build solutions that protect your sensitive data at rest and in
+                transit, enforce least privilege access to resources, and ensure proper handling of
+                untrusted user input.
               </LandingParagraph>
             </div>
             <div className="order-6">
@@ -116,41 +125,37 @@ export default function Home() {
               />
             </div>
             <div className="order-7 xl:order-8">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
-                Robust solutions that don't break the bank.
-              </h2>
-              <LandingParagraph className="mb-6">
+              <LandingH2>Robust solutions that don't break the bank</LandingH2>
+              <LandingParagraph>
                 It is estimated that businesses{' '}
                 <TextLink href="https://www.infoworld.com/article/3543754/during-covid-19-wasting-30-percent-of-cloud-spend-is-not-ok.html">
                   waste 30% of their cloud spend
                 </TextLink>
                 . Infrastructure costs can literally make or break a solution design.
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
+              <LandingParagraph>
                 At AWS, I helped reduce infrastructure spend, at times by more than $60K/month by
                 leveraging serverless architectures and optimizing compute and network egress costs.
               </LandingParagraph>
-              <LandingParagraph>
-                I will use this experience to help you build robust cost-optimized solutions that
-                scale gracefully in terms of cost.
+              <LandingParagraph className="mb-0">
+                I will help you build robust cost-optimized solutions that scale gracefully in terms
+                of cost.
               </LandingParagraph>
             </div>
             <div className="order-9">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
-                Start small. Scale indefinitely.
-              </h2>
-              <LandingParagraph className="mb-6">
+              <LandingH2>Start small. Scale indefinitely.</LandingH2>
+              <LandingParagraph>
                 Resilient and scalable designs allow room for growth and can gracefully handle
                 sudden load spikes.
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
+              <LandingParagraph>
                 At AWS, I built and operated event-driven services that autoscale to handle millions
                 of events and automatically release capacity when load subsides to avoid incurring
                 unnecessary costs.
               </LandingParagraph>
-              <LandingParagraph>
-                I will use this experience to help you build resilient and scalable solutions that
-                ensure business continuity under unexpected load spikes.
+              <LandingParagraph className="mb-0">
+                I will help you build resilient and scalable solutions that maintain business
+                continuity under unexpected load spikes.
               </LandingParagraph>
             </div>
             <div className="order-10">
@@ -174,28 +179,24 @@ export default function Home() {
               />
             </div>
             <div className="order-11 xl:order-12">
-              <h2 className="mb-6 text-center text-4xl font-extrabold xl:mt-8 xl:text-left xl:text-5xl">
-                Raise the operational excellence bar.
-              </h2>
-              <LandingParagraph className="mb-6">
+              <LandingH2>Raise the operational excellence bar</LandingH2>
+              <LandingParagraph>
                 You can't fix what you can't see. In-depth observability, CI/CD pipelines, alerts
                 and automatic rollbacks are non-negotiable in an operationally-sound design.
               </LandingParagraph>
-              <LandingParagraph className="mb-6">
+              <LandingParagraph>
                 At AWS, I built many microservices, with in-depth logging, monitoring and alerting.
                 I wrote plenty of unit tests, integration tests, canary tests and runbooks, and
                 implemented a lot of CI/CD deployment pipelines with automatic rollbacks.
               </LandingParagraph>
-              <LandingParagraph>
-                I will use this experience to help you build production-grade operationally-ready
-                AWS solutions with well-documented operational runbooks.
+              <LandingParagraph className="mb-0">
+                I will help you build production-grade operationally-ready AWS solutions with
+                well-documented operational runbooks.
               </LandingParagraph>
             </div>
           </div>
           <div className="mt-20">
-            <h2 className="mb-8 text-center text-4xl font-extrabold xl:mt-8 xl:text-5xl">
-              Reviews
-            </h2>
+            <LandingH2 className="text-center xl:text-center">Reviews</LandingH2>
             <Recommendation
               author="Arun Prabakaran"
               position="Senior Software Engineer"
@@ -297,6 +298,10 @@ export default function Home() {
               our infrastructure more stable and scalable. The passion and drive Haitham has for
               building make him a pleasure to work with, and an invaluable teammate.
             </Recommendation>
+          </div>
+          <div id="contact" className="mt-40">
+            <LandingH2 className="text-center xl:text-center">Get in touch</LandingH2>
+            <ContactForm />
           </div>
           {/*
           <div className="flex items-center justify-center pt-20">

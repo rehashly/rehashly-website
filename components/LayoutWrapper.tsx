@@ -1,8 +1,8 @@
 import { Footer } from '@/components/Footer'
 import { InvertibleImage } from '@/components/InvertibleImage'
 import { Link } from '@/components/Link'
+import { MobileNav } from '@/components/MobileNav'
 import { SectionContainer } from '@/components/SectionContainer'
-import { ThemeSwitch } from '@/components/ThemeSwitch'
 import { headerNavLinks } from '@/data/headerNavLinks'
 import { siteMetadata } from '@/data/siteMetadata'
 import { ReactElement, ReactNode } from 'react'
@@ -48,8 +48,8 @@ export function LayoutWrapper({ children }: LayoutWrapperProps): ReactElement<La
                 </Link>
               ))}
             </div>
-            <ThemeSwitch />
-            {/*<MobileNav />*/}
+            {/*<ThemeSwitch />*/}
+            <MobileNav />
           </div>
         </header>
         <main className="mb-auto">{children}</main>
