@@ -1,13 +1,11 @@
 import React, { ButtonHTMLAttributes, ReactElement } from 'react'
 
 type ButtonProps = {
-  enabledText?: string
-  disabledText?: string
+  ariaLabel?: string
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export function Button(props: ButtonProps): ReactElement<ButtonProps> {
-  const { type, className, disabled, enabledText, disabledText, onClick, ...rest } = props
-  const buttonText = disabled ? disabledText : enabledText
+  const { type, className, disabled, ariaLabel, children, onClick, ...rest } = props
 
   return (
     <button
@@ -20,13 +18,13 @@ export function Button(props: ButtonProps): ReactElement<ButtonProps> {
             : 'hover:bg-primary-700 dark:hover:bg-primary-400'
         } ${className}`
       }
-      aria-label={buttonText}
+      aria-label={ariaLabel}
       type={type}
       disabled={disabled}
       onClick={onClick}
       {...rest}
     >
-      {buttonText}
+      {children}
     </button>
   )
 }

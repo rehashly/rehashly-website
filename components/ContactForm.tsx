@@ -1,4 +1,5 @@
 import { Button } from '@/components/Button'
+import { Image } from '@/components/Image'
 import React, { useRef, useState } from 'react'
 
 export function ContactForm() {
@@ -6,11 +7,13 @@ export function ContactForm() {
   const emailInputEl = useRef<HTMLInputElement>(null)
   const messageInputEl = useRef<HTMLTextAreaElement>(null)
   const [error, setError] = useState(false)
+  const [sendingMessage, setSendingMessage] = useState(false)
   const [messageSent, setMessageSent] = useState(false)
   const [ackMessage, setAckMessage] = useState('')
 
   const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setSendingMessage(true)
 
     const res = await fetch(`/api/contact/nodemailer`, {
       body: JSON.stringify({
@@ -27,6 +30,7 @@ export function ContactForm() {
     const { error } = await res.json()
     if (error) {
       setError(true)
+      setSendingMessage(false)
       setMessageSent(false)
       setAckMessage(error)
       return
@@ -35,7 +39,9 @@ export function ContactForm() {
     nameInputEl.current.value = ''
     emailInputEl.current.value = ''
     messageInputEl.current.value = ''
+
     setError(false)
+    setSendingMessage(false)
     setMessageSent(true)
     setAckMessage('Message received. Will get back to you soon. Thank you!')
   }
@@ -88,11 +94,17 @@ export function ContactForm() {
             required
           />
         </div>
-        <Button className="w-full xl:w-full" type="submit" enabledText="Submit" />
+        <Button className="w-full xl:w-full" type="submit">
+          {sendingMessage ? (
+            <Image alt="Spinner" src="/static/images/spinner.svg" width={50} height={50} />
+          ) : (
+            'Submit'
+          )}
+        </Button>
         {(messageSent || error) && (
           <div
             className={`w-72 text-sm sm:w-96 ${
-              messageSent ? 'text-green-500 dark:text-green-400' : 'text-red-500 dark:text-red-400'
+              messageSent ? 'text-green-600 dark:text-green-400' : 'text-red-500 dark:text-red-400'
             }`}
           >
             {ackMessage}

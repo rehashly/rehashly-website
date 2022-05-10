@@ -47,7 +47,8 @@ export default function Home() {
             <div className="flex flex-col gap-6 xl:w-[45%]">
               <LandingH2 id="about">About me</LandingH2>
               <LandingParagraph>
-                Hi there 👋 , this is Haitham Gad, a 15+ years software engineering veteran.
+                Hi there 👋 , this is Haitham Gad. I've been building software for the past 15+
+                years.
               </LandingParagraph>
               <LandingParagraph>
                 Before starting Rehashly, I spent 5+ years at AWS building and operating AWS
@@ -307,6 +308,11 @@ export default function Home() {
         </div>
         <div id="contact" className="flex flex-col gap-6">
           <LandingH2 className="text-center xl:text-center">Get in touch</LandingH2>
+          <div className="align-center flex flex-row justify-center">
+            <LandingParagraph className="flex w-80 flex-col xl:w-96">
+              Use the form below to connect with me. I typically respond within 1-2 business days.
+            </LandingParagraph>
+          </div>
           <ContactForm />
         </div>
         {/*

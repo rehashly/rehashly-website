@@ -56,13 +56,9 @@ export function NewsletterForm({ title = '' }) {
             disabled={subscribed}
           />
         </div>
-        <Button
-          className="mt-3 sm:mt-0 sm:ml-3"
-          type="submit"
-          disabled={subscribed}
-          enabledText="Sign up"
-          disabledText="Thank you!"
-        />
+        <Button className="mt-3 sm:mt-0 sm:ml-3" type="submit" disabled={subscribed}>
+          Sign up
+        </Button>
       </form>
       {error && (
         <div className="w-72 pt-2 text-sm text-red-500 dark:text-red-400 sm:w-96">{message}</div>
