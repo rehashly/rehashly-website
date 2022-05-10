@@ -88,7 +88,7 @@ export function ContactForm() {
           />
         </div>
         <Button
-          className="mt-3 w-96"
+          className="mt-3 w-80 xl:w-96"
           type="submit"
           disabled={sent}
           enabledText="Submit"
