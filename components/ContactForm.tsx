@@ -82,7 +82,7 @@ export function ContactForm() {
             id="message-input"
             name="message"
             placeholder="Message"
-            rows={5}
+            rows={7}
             ref={messageInputEl}
             required
           />
