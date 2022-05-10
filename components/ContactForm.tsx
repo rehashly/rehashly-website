@@ -6,8 +6,8 @@ export function ContactForm() {
   const emailInputEl = useRef<HTMLInputElement>(null)
   const messageInputEl = useRef<HTMLTextAreaElement>(null)
   const [error, setError] = useState(false)
-  const [errorMessage, setErrorMessage] = useState('')
   const [messageSent, setMessageSent] = useState(false)
+  const [ackMessage, setAckMessage] = useState('')
 
   const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -28,7 +28,7 @@ export function ContactForm() {
     if (error) {
       setError(true)
       setMessageSent(false)
-      setErrorMessage(error)
+      setAckMessage(error)
       return
     }
 
@@ -37,6 +37,7 @@ export function ContactForm() {
     messageInputEl.current.value = ''
     setError(false)
     setMessageSent(true)
+    setAckMessage('Message received. Will get back to you soon. Thank you!')
   }
 
   return (
@@ -52,7 +53,6 @@ export function ContactForm() {
             id="name-input"
             name="name"
             placeholder="Full name"
-            disabled={messageSent}
             ref={nameInputEl}
             required
             type="text"
@@ -68,7 +68,6 @@ export function ContactForm() {
             id="email-input"
             name="email"
             placeholder="Email address"
-            disabled={messageSent}
             ref={emailInputEl}
             required
             type="email"
@@ -85,24 +84,21 @@ export function ContactForm() {
             name="message"
             placeholder="Message"
             rows={7}
-            disabled={messageSent}
             ref={messageInputEl}
             required
           />
         </div>
-        <Button
-          className="mt-3 w-80 xl:w-96"
-          type="submit"
-          disabled={messageSent}
-          enabledText="Submit"
-          disabledText="Message Received. Thank you!"
-        />
+        <Button className="mt-3 w-full xl:w-96" type="submit" enabledText="Submit" />
+        {(messageSent || error) && (
+          <div
+            className={`w-72 pt-2 text-sm sm:w-96 ${
+              messageSent ? 'text-green-500 dark:text-green-400' : 'text-red-500 dark:text-red-400'
+            }`}
+          >
+            {ackMessage}
+          </div>
+        )}
       </form>
-      {error && (
-        <div className="w-72 pt-2 text-sm text-red-500 dark:text-red-400 sm:w-96">
-          {errorMessage}
-        </div>
-      )}
     </div>
   )
 }

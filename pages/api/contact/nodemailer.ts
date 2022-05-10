@@ -1,3 +1,4 @@
+import * as validator from 'email-validator'
 import { NextApiRequest, NextApiResponse } from 'next'
 import * as nodemailer from 'nodemailer'
 
@@ -8,12 +9,28 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(400).json({ error: 'Name is required' })
   }
 
+  if (name.length > 60) {
+    return res.status(400).json({ error: 'Name is too long' })
+  }
+
   if (!email) {
     return res.status(400).json({ error: 'Email is required' })
   }
 
+  if (email.length > 100) {
+    return res.status(400).json({ error: 'Email is too long' })
+  }
+
+  if (!validator.validate(email)) {
+    return res.status(400).json({ error: 'Email is invalid' })
+  }
+
   if (!message) {
     return res.status(400).json({ error: 'Message is required' })
+  }
+
+  if (message.length > 100000) {
+    return res.status(400).json({ error: 'Message is too long' })
   }
 
   try {
@@ -21,7 +38,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       host: 'smtp.gmail.com',
       port: 465,
       secure: true,
-      greetingTimeout: 5 * 1000,
       auth: {
         type: 'OAuth2',
         user: 'haitham@rehashly.com',
@@ -31,7 +47,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       },
     })
 
-    transporter.sendMail({
+    await transporter.sendMail({
       from: `${name} <${email}>`,
       sender: `${name} <${email}>`,
       to: 'Haitham Gad <haitham@rehashly.com>',
