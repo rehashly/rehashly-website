@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Rehashly | Ship well-architected AWS solutions, fast',
+  title: 'Rehashly - Ship well-architected AWS solutions, fast',
   author: 'Haitham Gad',
   headerTitle: '',
   legalName: 'Rehashly, LLC',
