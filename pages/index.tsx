@@ -51,14 +51,13 @@ export default function Home() {
                 years.
               </LandingParagraph>
               <LandingParagraph>
-                Before starting Rehashly, I spent 5+ years at AWS building and operating AWS
-                services with strong requirements on security, reliability, scalability and
-                operational excellence.
+                I spent 5+ years at AWS building and operating AWS services with strong requirements
+                on security, reliability, scalability and operational excellence.
               </LandingParagraph>
               <LandingParagraph className="mb-0">
-                I help businesses accelerate value delivery, reduce infrastructure cost, improve
-                their security posture and achieve operational excellence by utilizing the right mix
-                of AWS technologies.
+                I started Rehashly to help businesses deliver value quickly, reduce their
+                infrastructure costs, improve their security posture and achieve operational
+                excellence by utilizing the right mix of AWS technologies.
               </LandingParagraph>
             </div>
           </LandingSection>
@@ -78,22 +77,20 @@ export default function Home() {
                   <TextLink href="https://aws.amazon.com/guardduty/">
                     an AWS security service
                   </TextLink>{' '}
-                  for more than 5 years. I also led many compliance efforts (including GDPR, HIPAA,
-                  SOC 2 and FedRAMP) and SecOps engagements.
+                  for more than 5 years and led many compliance efforts and SecOps engagements.
                 </LandingParagraph>
               </div>
               <div className="flex flex-col gap-1">
-                <LandingH3>Expert at threat modeling</LandingH3>
+                <LandingH3>Threat modeling expert</LandingH3>
                 <LandingParagraph>
-                  I led an AppSec review acceleration program where I wrote and reviewed numerous
-                  threat models and worked closely with AppSec to mitigate uncovered attack vectors.
+                  I led numerous AppSec reviews, wrote and reviewed many threat models and worked
+                  closely with AppSec teams to mitigate the most subtle and intricate AWS attack
+                  vectors.
                 </LandingParagraph>
               </div>
               <div className="flex flex-col gap-1">
                 <LandingH3>Certified security specialist</LandingH3>
-                <LandingParagraph>
-                  I've been certified by AWS in the security specialty.
-                </LandingParagraph>
+                <LandingParagraph>I'm certified by AWS in the security specialty.</LandingParagraph>
                 <LandingParagraph className="mt-6 text-center xl:text-center">
                   <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
                     <Image
@@ -137,7 +134,7 @@ export default function Home() {
                 <TextLink href="https://www.infoworld.com/article/3543754/during-covid-19-wasting-30-percent-of-cloud-spend-is-not-ok.html">
                   waste 30% of their cloud spend
                 </TextLink>
-                . Infrastructure costs can literally make or break a solution design.
+                .
               </LandingParagraph>
               <LandingParagraph>
                 At AWS, I helped reduce infrastructure spend, at times by more than $60K/month by
@@ -187,13 +184,14 @@ export default function Home() {
             <div className="flex flex-col gap-6 xl:w-[45%]">
               <LandingH2>Raise the operational excellence bar</LandingH2>
               <LandingParagraph>
-                You can't fix what you can't see. In-depth observability, CI/CD pipelines, alerts
-                and automatic rollbacks are non-negotiable in an operationally-sound design.
+                In-depth observability, continuous integration and delivery, alerts and automatic
+                rollbacks are crucial in an operationally-sound solution.
               </LandingParagraph>
               <LandingParagraph>
                 At AWS, I built many microservices, with in-depth logging, monitoring and alerting.
                 I wrote plenty of unit tests, integration tests, canary tests and runbooks, and
-                implemented a lot of CI/CD deployment pipelines with automatic rollbacks.
+                built a lot of CI/CD deployment pipelines with continuous monitoring and automatic
+                rollbacks.
               </LandingParagraph>
               <LandingParagraph className="mb-0">
                 I will help you build production-grade operationally-ready AWS solutions with
