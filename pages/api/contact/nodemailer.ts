@@ -30,9 +30,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       },
     })
 
-    transporter.sendMail({
+    await transporter.sendMail({
       from: `${name} <${email}>`,
-      to: 'haitham@rehashly.com',
+      to: 'Haitham Gad <haitham@rehashly.com>',
       replyTo: email,
       subject: `Message from ${name}`,
       text: message,
