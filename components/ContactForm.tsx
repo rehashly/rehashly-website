@@ -51,7 +51,7 @@ export function ContactForm() {
             className="w-full rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
             id="name-input"
             name="name"
-            placeholder="Name"
+            placeholder="Full name"
             ref={nameInputEl}
             required
             type="text"
@@ -66,7 +66,7 @@ export function ContactForm() {
             className="w-full rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
             id="email-input"
             name="email"
-            placeholder="Email"
+            placeholder="Email address"
             ref={emailInputEl}
             required
             type="email"
