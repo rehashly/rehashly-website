@@ -13,8 +13,11 @@ export function Button(props: ButtonProps): ReactElement<ButtonProps> {
     <button
       className={
         `h-10 rounded-md bg-primary-500 px-4 font-medium text-white focus:outline-none focus:ring-2 focus:ring-primary-600 ` +
-        `focus:ring-offset-2 dark:ring-offset-black ${
-          disabled ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-primary-400'
+        `focus:ring-offset-2 dark:ring-offset-black` +
+        `${
+          disabled
+            ? 'cursor-default bg-primary-300 dark:bg-primary-200'
+            : 'hover:bg-primary-700 dark:hover:bg-primary-400'
         } ${className}`
       }
       aria-label={buttonText}

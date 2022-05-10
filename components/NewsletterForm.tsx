@@ -31,7 +31,7 @@ export function NewsletterForm({ title = '' }) {
     inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
-    setMessage('Successfully! 🎉 You are now subscribed.')
+    setMessage('Successful! 🎉 You are now subscribed.')
   }
 
   return (

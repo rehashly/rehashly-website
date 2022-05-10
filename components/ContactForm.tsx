@@ -6,8 +6,8 @@ export function ContactForm() {
   const emailInputEl = useRef<HTMLInputElement>(null)
   const messageInputEl = useRef<HTMLTextAreaElement>(null)
   const [error, setError] = useState(false)
-  const [message, setMessage] = useState('')
-  const [sent, setSent] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
+  const [messageSent, setMessageSent] = useState(false)
 
   const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -27,8 +27,8 @@ export function ContactForm() {
     const { error } = await res.json()
     if (error) {
       setError(true)
-      setSent(true)
-      setMessage(error)
+      setMessageSent(false)
+      setErrorMessage(error)
       return
     }
 
@@ -36,7 +36,7 @@ export function ContactForm() {
     emailInputEl.current.value = ''
     messageInputEl.current.value = ''
     setError(false)
-    setMessage('Your message has been received! Will get back to you soon.')
+    setMessageSent(true)
   }
 
   return (
@@ -52,6 +52,7 @@ export function ContactForm() {
             id="name-input"
             name="name"
             placeholder="Full name"
+            disabled={messageSent}
             ref={nameInputEl}
             required
             type="text"
@@ -67,6 +68,7 @@ export function ContactForm() {
             id="email-input"
             name="email"
             placeholder="Email address"
+            disabled={messageSent}
             ref={emailInputEl}
             required
             type="email"
@@ -83,6 +85,7 @@ export function ContactForm() {
             name="message"
             placeholder="Message"
             rows={7}
+            disabled={messageSent}
             ref={messageInputEl}
             required
           />
@@ -90,13 +93,15 @@ export function ContactForm() {
         <Button
           className="mt-3 w-80 xl:w-96"
           type="submit"
-          disabled={sent}
+          disabled={messageSent}
           enabledText="Submit"
-          disabledText="Thank you!"
+          disabledText="Message Received. Thank you!"
         />
       </form>
       {error && (
-        <div className="w-72 pt-2 text-sm text-red-500 dark:text-red-400 sm:w-96">{message}</div>
+        <div className="w-72 pt-2 text-sm text-red-500 dark:text-red-400 sm:w-96">
+          {errorMessage}
+        </div>
       )}
     </div>
   )

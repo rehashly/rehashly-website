@@ -21,6 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       host: 'smtp.gmail.com',
       port: 465,
       secure: true,
+      greetingTimeout: 5 * 1000,
       auth: {
         type: 'OAuth2',
         user: 'haitham@rehashly.com',
@@ -30,8 +31,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       },
     })
 
-    await transporter.sendMail({
+    transporter.sendMail({
       from: `${name} <${email}>`,
+      sender: `${name} <${email}>`,
       to: 'Haitham Gad <haitham@rehashly.com>',
       replyTo: email,
       subject: `Message from ${name}`,
