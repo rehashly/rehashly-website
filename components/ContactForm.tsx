@@ -42,8 +42,8 @@ export function ContactForm() {
 
   return (
     <div className="align-center flex flex-row justify-center">
-      <form className="flex flex-col" onSubmit={sendMessage}>
-        <div className="mt-3">
+      <form className="flex w-80 flex-col gap-3 xl:w-96" onSubmit={sendMessage}>
+        <div>
           <label className="sr-only" htmlFor="name-input">
             Name
           </label>
@@ -58,7 +58,7 @@ export function ContactForm() {
             type="text"
           />
         </div>
-        <div className="mt-3">
+        <div>
           <label className="sr-only" htmlFor="email-input">
             Email
           </label>
@@ -73,7 +73,7 @@ export function ContactForm() {
             type="email"
           />
         </div>
-        <div className="mt-3">
+        <div>
           <label className="sr-only" htmlFor="message-input">
             Message
           </label>
@@ -88,10 +88,10 @@ export function ContactForm() {
             required
           />
         </div>
-        <Button className="mt-3 w-full xl:w-96" type="submit" enabledText="Submit" />
+        <Button className="w-full xl:w-full" type="submit" enabledText="Submit" />
         {(messageSent || error) && (
           <div
-            className={`w-72 pt-2 text-sm sm:w-96 ${
+            className={`w-72 text-sm sm:w-96 ${
               messageSent ? 'text-green-500 dark:text-green-400' : 'text-red-500 dark:text-red-400'
             }`}
           >

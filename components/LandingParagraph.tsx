@@ -9,7 +9,7 @@ export function LandingParagraph(
 
   return (
     <p
-      className={`mb-6 text-left text-lg text-gray-500 dark:text-gray-400 xl:text-left xl:text-xl ${className}`}
+      className={`text-left text-lg text-gray-500 dark:text-gray-400 xl:text-left xl:text-xl ${className}`}
       {...rest}
     >
       {children}

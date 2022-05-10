@@ -16,9 +16,9 @@ export default function Home() {
       {siteMetadata.newsletter.provider !== '' && (
         <div>
           <div className="xl:justify-items-left grid grid-cols-1 items-center justify-items-center gap-x-12 gap-y-20 pt-20 xl:mt-[7vh] xl:mb-64 xl:grid-cols-2 xl:gap-y-64">
-            <div className="order-1">
+            <div className="order-1 flex flex-col gap-8">
               <LandingH1>Build AWS solutions the way AWS does it.</LandingH1>
-              <LandingParagraph className="mb-5 text-center">
+              <LandingParagraph className="text-center">
                 Get help building resilient, secure and cost-optimized AWS solutions from an ex-AWS
                 engineer.
               </LandingParagraph>
@@ -45,7 +45,7 @@ export default function Home() {
                 height={350}
               />
             </div>
-            <div className="order-3 xl:order-4">
+            <div className="order-3 flex flex-col gap-6 xl:order-4">
               <LandingH2 id="about">About me</LandingH2>
               <LandingParagraph>
                 Hi there 👋 , this is Haitham Gad, a 15+ years software engineering veteran.
@@ -61,7 +61,7 @@ export default function Home() {
                 of AWS technologies.
               </LandingParagraph>
             </div>
-            <div className="order-5">
+            <div className="order-5 flex flex-col gap-6">
               <LandingH2>Security in-depth</LandingH2>
               <LandingParagraph>
                 When done right, data and workloads are more secure in the cloud than on-prem.
@@ -69,35 +69,41 @@ export default function Home() {
                 misconfigurations and integration anti-patterns can leave your infrastructure
                 exposed.
               </LandingParagraph>
-              <LandingH3>Builder with a security focus</LandingH3>
-              <LandingParagraph>
-                I built and operated{' '}
-                <TextLink href="https://aws.amazon.com/guardduty/">
-                  an AWS security service
-                </TextLink>{' '}
-                for more than 5 years. I also led many compliance efforts (including GDPR, HIPAA,
-                SOC 2 and FedRAMP) and SecOps engagements.
-              </LandingParagraph>
-              <LandingH3>Expert at threat modeling</LandingH3>
-              <LandingParagraph>
-                I led an AppSec review acceleration program where I wrote and reviewed numerous
-                threat models and worked closely with AppSec to mitigate uncovered attack vectors.
-              </LandingParagraph>
-              <LandingH3>Certified security specialist</LandingH3>
-              <LandingParagraph>
-                I've been certified by AWS in the security specialty.
-              </LandingParagraph>
-              <LandingParagraph className="my-7 text-center xl:text-center">
-                <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
-                  <Image
-                    alt="AWS Security Specialty Certification"
-                    src="/static/images/aws-security-specialty-certification.png"
-                    className="mx-auto block"
-                    width={150}
-                    height={150}
-                  />
-                </TextLink>
-              </LandingParagraph>
+              <div className="flex flex-col gap-1">
+                <LandingH3>Builder with a security focus</LandingH3>
+                <LandingParagraph>
+                  I built and operated{' '}
+                  <TextLink href="https://aws.amazon.com/guardduty/">
+                    an AWS security service
+                  </TextLink>{' '}
+                  for more than 5 years. I also led many compliance efforts (including GDPR, HIPAA,
+                  SOC 2 and FedRAMP) and SecOps engagements.
+                </LandingParagraph>
+              </div>
+              <div className="flex flex-col gap-1">
+                <LandingH3>Expert at threat modeling</LandingH3>
+                <LandingParagraph>
+                  I led an AppSec review acceleration program where I wrote and reviewed numerous
+                  threat models and worked closely with AppSec to mitigate uncovered attack vectors.
+                </LandingParagraph>
+              </div>
+              <div className="flex flex-col gap-1">
+                <LandingH3>Certified security specialist</LandingH3>
+                <LandingParagraph>
+                  I've been certified by AWS in the security specialty.
+                </LandingParagraph>
+                <LandingParagraph className="my-7 text-center xl:text-center">
+                  <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
+                    <Image
+                      alt="AWS Security Specialty Certification"
+                      src="/static/images/aws-security-specialty-certification.png"
+                      className="mx-auto block"
+                      width={150}
+                      height={150}
+                    />
+                  </TextLink>
+                </LandingParagraph>
+              </div>
               <LandingParagraph>
                 I will help you build solutions that protect your sensitive data at rest and in
                 transit, enforce least privilege access to resources, and ensure proper handling of
@@ -106,7 +112,7 @@ export default function Home() {
             </div>
             <div className="order-6">
               <InvertibleImage
-                alt="Security from the outset"
+                alt="Security in-depth"
                 lightSrc="/static/images/aws-security-light.svg"
                 darkSrc="/static/images/aws-security-dark.svg"
                 className="object-fill object-center"
@@ -124,7 +130,7 @@ export default function Home() {
                 height={250}
               />
             </div>
-            <div className="order-7 xl:order-8">
+            <div className="order-7 flex flex-col gap-6 xl:order-8">
               <LandingH2>Robust solutions that don't break the bank</LandingH2>
               <LandingParagraph>
                 It is estimated that businesses{' '}
@@ -142,7 +148,7 @@ export default function Home() {
                 of cost.
               </LandingParagraph>
             </div>
-            <div className="order-9">
+            <div className="order-9 flex flex-col gap-6">
               <LandingH2>Start small. Scale indefinitely.</LandingH2>
               <LandingParagraph>
                 Resilient and scalable designs allow room for growth and can gracefully handle
@@ -178,7 +184,7 @@ export default function Home() {
                 height={400}
               />
             </div>
-            <div className="order-11 xl:order-12">
+            <div className="order-11 flex flex-col gap-6 xl:order-12">
               <LandingH2>Raise the operational excellence bar</LandingH2>
               <LandingParagraph>
                 You can't fix what you can't see. In-depth observability, CI/CD pipelines, alerts
@@ -195,7 +201,7 @@ export default function Home() {
               </LandingParagraph>
             </div>
           </div>
-          <div className="mt-20">
+          <div className="flex flex-col gap-6">
             <LandingH2 className="text-center xl:text-center">Reviews</LandingH2>
             <Recommendation
               author="Arun Prabakaran"
@@ -299,7 +305,7 @@ export default function Home() {
               building make him a pleasure to work with, and an invaluable teammate.
             </Recommendation>
           </div>
-          <div id="contact" className="mt-40">
+          <div id="contact" className="mt-40 flex flex-col gap-6">
             <LandingH2 className="text-center xl:text-center">Get in touch</LandingH2>
             <ContactForm />
           </div>
