@@ -204,6 +204,34 @@ export default function Home() {
         <div className="flex flex-col gap-6">
           <LandingH2 className="text-center xl:text-center">Reviews</LandingH2>
           <Recommendation
+            author="Shane Pereira"
+            position="Partner Software Architect"
+            company="Microsoft"
+            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+          >
+            Each application security related issue is unique, and requires someone with{' '}
+            <LandingEmphasis>
+              deep understanding of AWS, a cool disposition, high judgement, creativity, and
+              pragmatism
+            </LandingEmphasis>{' '}
+            to figure out where to set the security bar so as to ensure the right outcome for the
+            customer, and for Amazon. <LandingEmphasis>Haitham has this in spades</LandingEmphasis>!
+          </Recommendation>
+          <Recommendation
+            author="Sunu Mathew"
+            position="Senior Software Engineer"
+            company="AWS"
+            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+          >
+            Haitham is a <LandingEmphasis>strong and experienced engineer</LandingEmphasis> with a
+            passion for securing cloud applications. He played a pivotal role over several years in
+            securing GuardDuty's AWS infrastructure using best practices and leading AppSec review
+            efforts for new feature launches.{' '}
+            <LandingEmphasis>He has great judgement and makes the right choices</LandingEmphasis> in
+            evaluating and addressing application security aspects associated with large software
+            projects.
+          </Recommendation>
+          <Recommendation
             author="Arun Prabakaran"
             position="Senior Software Engineer"
             company="AWS"
@@ -213,6 +241,26 @@ export default function Home() {
             multiple AWS accounts <LandingEmphasis>in a short span of time</LandingEmphasis> during
             the early stages of GuardDuty, which is being used by multiple other AWS teams and{' '}
             <LandingEmphasis>sets an example for insisting on highest standards</LandingEmphasis>.
+          </Recommendation>
+          <Recommendation
+            author="Wei Wang"
+            position="Engineering Manager"
+            company="AWS"
+            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+          >
+            Haitham was the first engineer in the team to be{' '}
+            <LandingEmphasis>
+              certified as an AWS AppSec Guardian, which is a critical role given the risks involved
+            </LandingEmphasis>
+            . It requires a cool head, high judgement, the ability to chase a problem down by
+            navigating across several teams at Amazon, and{' '}
+            <LandingEmphasis>
+              the ability to clearly articulate and debate often highly contentious positions with
+              the most senior engineers at Amazon
+            </LandingEmphasis>
+            . It also requires a combination of a high-level understanding of the overall
+            architecture of the entire service and the ability to dive as deep into a variety of
+            security technologies and processes when needed.
           </Recommendation>
           <Recommendation
             author="Rashmi Giridhara"
@@ -240,58 +288,6 @@ export default function Home() {
               His experience with securing cloud architectures is invaluable
             </LandingEmphasis>
             !
-          </Recommendation>
-          <Recommendation
-            author="Sunu Mathew"
-            position="Senior Software Engineer"
-            company="AWS"
-            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-          >
-            Haitham is a <LandingEmphasis>strong and experienced engineer</LandingEmphasis> with a
-            passion for securing cloud applications. He played a pivotal role over several years in
-            securing GuardDuty's AWS infrastructure using best practices and leading AppSec review
-            efforts for new feature launches.{' '}
-            <LandingEmphasis>He has great judgement and makes the right choices</LandingEmphasis> in
-            evaluating and addressing application security aspects associated with large software
-            projects.
-          </Recommendation>
-          <Recommendation
-            author="Shane Pereira"
-            position="Partner Software Architect"
-            company="Microsoft"
-            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-          >
-            Haitham was the go-to engineer in the org for all things security-related, from
-            reviewing the designs for what is a significantly complex service-oriented architecture
-            that handles data at high scale, to working with SecOps, AppSec and senior leadership to
-            handle security escalations where every minute matters, to inventing new solutions to
-            tricky security problems in our designs.{' '}
-            <LandingEmphasis>Haitham has done it all</LandingEmphasis>. Each application security
-            related issue is unique, and requires someone with{' '}
-            <LandingEmphasis>
-              deep understanding of AWS, a cool disposition, high judgement, creativity, and
-              pragmatism
-            </LandingEmphasis>{' '}
-            to figure out where to set the security bar so as to ensure the right outcome for the
-            customer, and for Amazon. <LandingEmphasis>Haitham has this in spades</LandingEmphasis>!
-          </Recommendation>
-          <Recommendation
-            author="Wei Wang"
-            position="Engineering Manager"
-            company="AWS"
-            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-          >
-            Haitham was the first engineer in the team to be certified as an AWS AppSec Guardian,
-            which is a critical role given the risks involved. It requires a cool head, high
-            judgement, the ability to chase a problem down by navigating across several teams at
-            Amazon, and{' '}
-            <LandingEmphasis>
-              the ability to clearly articulate and debate often highly contentious positions with
-              the most senior engineers at Amazon
-            </LandingEmphasis>
-            . It also requires a combination of a high-level understanding of the overall
-            architecture of the entire service, as well as the ability to dive as deep into a
-            variety of security technologies and processes when needed.
           </Recommendation>
           <Recommendation
             author="Conor Lorsung"
