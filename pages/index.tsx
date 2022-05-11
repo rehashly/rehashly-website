@@ -248,7 +248,7 @@ export default function Home() {
             company="AWS"
             link="https://www.linkedin.com/in/haithamgad/details/recommendations"
           >
-            Haitham was the first engineer in the team to be{' '}
+            Haitham was the first engineer on the team to be{' '}
             <LandingEmphasis>
               certified as an AWS AppSec Guardian, which is a critical role given the risks involved
             </LandingEmphasis>
@@ -258,9 +258,7 @@ export default function Home() {
               the ability to clearly articulate and debate often highly contentious positions with
               the most senior engineers at Amazon
             </LandingEmphasis>
-            . It also requires a combination of a high-level understanding of the overall
-            architecture of the entire service and the ability to dive as deep into a variety of
-            security technologies and processes when needed.
+            .
           </Recommendation>
           <Recommendation
             author="Rashmi Giridhara"
@@ -269,8 +267,7 @@ export default function Home() {
             link="https://www.linkedin.com/in/haithamgad/details/recommendations"
           >
             Haitham is an experienced software developer with{' '}
-            <LandingEmphasis>strong foundation of cloud services</LandingEmphasis>. He was a go-to
-            engineer on the team for security reviews of existing and new services. Haitham's
+            <LandingEmphasis>strong foundation of cloud services</LandingEmphasis>. Haitham's
             knowledge on system design made him a good teammate to bounce ideas off and is easy to
             work with.
           </Recommendation>
