@@ -183,7 +183,7 @@ export default function Home() {
               height={400}
             />
             <div className="flex flex-col gap-6 xl:w-[45%]">
-              <LandingH2>Raise the operational excellence bar</LandingH2>
+              <LandingH2>Raise the bar on DevOps</LandingH2>
               <LandingParagraph>
                 In-depth observability, continuous integration and delivery, alerts and automatic
                 rollbacks are crucial in an operationally-sound solution.
@@ -205,8 +205,8 @@ export default function Home() {
           <LandingH2 className="text-center xl:text-center">Reviews</LandingH2>
           <Recommendation
             author="Shane Pereira"
-            position="Partner Software Architect"
-            company="Microsoft"
+            position="Former Principal Engineer"
+            company="AWS"
             link="https://www.linkedin.com/in/haithamgad/details/recommendations"
           >
             Each application security related issue is unique, and requires someone with{' '}
@@ -216,6 +216,24 @@ export default function Home() {
             </LandingEmphasis>{' '}
             to figure out where to set the security bar so as to ensure the right outcome for the
             customer, and for Amazon. <LandingEmphasis>Haitham has this in spades</LandingEmphasis>!
+          </Recommendation>
+          <Recommendation
+            author="Wei Wang"
+            position="Engineering Manager"
+            company="AWS"
+            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+          >
+            Haitham was the first engineer on the team to be{' '}
+            <LandingEmphasis>
+              certified as an AWS AppSec Guardian, which is a critical role given the risks involved
+            </LandingEmphasis>
+            . It requires a cool head, high judgement, the ability to chase a problem down by
+            navigating across several teams at Amazon, and{' '}
+            <LandingEmphasis>
+              the ability to clearly articulate and debate often highly contentious positions with
+              the most senior engineers at Amazon
+            </LandingEmphasis>
+            .
           </Recommendation>
           <Recommendation
             author="Sunu Mathew"
@@ -241,24 +259,6 @@ export default function Home() {
             multiple AWS accounts <LandingEmphasis>in a short span of time</LandingEmphasis> during
             the early stages of GuardDuty, which is being used by multiple other AWS teams and{' '}
             <LandingEmphasis>sets an example for insisting on highest standards</LandingEmphasis>.
-          </Recommendation>
-          <Recommendation
-            author="Wei Wang"
-            position="Engineering Manager"
-            company="AWS"
-            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-          >
-            Haitham was the first engineer on the team to be{' '}
-            <LandingEmphasis>
-              certified as an AWS AppSec Guardian, which is a critical role given the risks involved
-            </LandingEmphasis>
-            . It requires a cool head, high judgement, the ability to chase a problem down by
-            navigating across several teams at Amazon, and{' '}
-            <LandingEmphasis>
-              the ability to clearly articulate and debate often highly contentious positions with
-              the most senior engineers at Amazon
-            </LandingEmphasis>
-            .
           </Recommendation>
           <Recommendation
             author="Rashmi Giridhara"
