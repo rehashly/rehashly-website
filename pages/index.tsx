@@ -205,8 +205,9 @@ export default function Home() {
             <div className="flex flex-col gap-6 xl:w-[45%]">
               <LandingH2>Cultivate your DevOps culture</LandingH2>
               <LandingParagraph>
-                To iterate fast, you need systems in place to stop bad code from reaching production
-                and alert your team when your services are experiencing disruption.
+                To iterate fast, you need systems and processes in place to stop bad code from
+                reaching production and alert your team when your services are experiencing
+                disruption.
               </LandingParagraph>
               <LandingParagraph>
                 At AWS, I built many microservices, with in-depth logging, monitoring and alerting.
@@ -215,8 +216,9 @@ export default function Home() {
                 rollbacks.
               </LandingParagraph>
               <LandingParagraph className="mb-0">
-                I will help you build production-grade operationally-ready AWS solutions with
-                well-documented operational runbooks.
+                I will educate your team on DevOps best practices and help you build
+                production-grade operationally-ready AWS solutions with well-documented operational
+                runbooks.
               </LandingParagraph>
               <div className="flex flex-row justify-center xl:justify-start">
                 <ButtonLink className="w-44" href="#contact">
