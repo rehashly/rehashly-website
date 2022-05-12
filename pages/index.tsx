@@ -24,27 +24,33 @@ export default function Home() {
                 Get help building resilient, secure and cost-optimized AWS solutions from an ex-AWS
                 engineer.
               </LandingParagraph>
-              <div className="flex justify-center xl:justify-start">
-                <ButtonLink href="#contact">Get in touch</ButtonLink>
+              <div className="flex flex-row justify-center xl:justify-start">
+                <ButtonLink className="w-48" href="#contact">
+                  Start building
+                </ButtonLink>
               </div>
             </div>
-            <InvertibleImage
-              alt="Well-architected AWS solutions."
-              lightSrc="/static/images/hero-light.svg"
-              darkSrc="/static/images/hero-dark.svg"
-              className="max-w-full object-fill object-center"
-              width={450}
-              height={410}
-            />
+            <div className="flex flex-row justify-center xl:w-[45%]">
+              <InvertibleImage
+                alt="Well-architected AWS solutions."
+                lightSrc="/static/images/hero-light.svg"
+                darkSrc="/static/images/hero-dark.svg"
+                className="max-w-full object-fill object-center"
+                width={450}
+                height={410}
+              />
+            </div>
           </LandingSection>
           <LandingSection flexColDirection="flex-col-reverse">
-            <Image
-              alt="Haitham Gad"
-              src="/static/images/haitham.png"
-              className="mb-0 rounded-full object-fill object-center"
-              width={350}
-              height={350}
-            />
+            <div className="flex flex-row justify-center xl:w-[45%]">
+              <Image
+                alt="Haitham Gad"
+                src="/static/images/haitham.png"
+                className="rounded-full"
+                width={350}
+                height={350}
+              />
+            </div>
             <div className="flex flex-col gap-6 xl:w-[45%]">
               <LandingH2 id="about">About me</LandingH2>
               <LandingParagraph>
@@ -64,7 +70,7 @@ export default function Home() {
           </LandingSection>
           <LandingSection flexColDirection="flex-col">
             <div className="flex flex-col gap-6 xl:w-[45%]">
-              <LandingH2>Security in-depth</LandingH2>
+              <LandingH2>Security from the outset</LandingH2>
               <LandingParagraph>
                 When done right, data and workloads are more secure in the cloud than on-prem.
                 However, without the right experience, security in the cloud can be tricky. Resource
@@ -78,7 +84,8 @@ export default function Home() {
                   <TextLink href="https://aws.amazon.com/guardduty/">
                     an AWS security service
                   </TextLink>{' '}
-                  for more than 5 years and led many compliance efforts and SecOps engagements.
+                  for more than 5 years and led many compliance efforts, AppSec reviews and SecOps
+                  engagements.
                 </LandingParagraph>
               </div>
               <div className="flex flex-col gap-1">
@@ -109,25 +116,34 @@ export default function Home() {
                 transit, enforce least privilege access to resources, and ensure proper handling of
                 untrusted user input.
               </LandingParagraph>
+              <div className="flex flex-row justify-center xl:justify-start">
+                <ButtonLink className="w-64" href="#contact">
+                  Secure your cloud footprint
+                </ButtonLink>
+              </div>
             </div>
-            <InvertibleImage
-              alt="Security in-depth"
-              lightSrc="/static/images/aws-security-light.svg"
-              darkSrc="/static/images/aws-security-dark.svg"
-              className="object-fill object-center"
-              width={450}
-              height={350}
-            />
+            <div className="flex flex-row justify-center xl:w-[45%]">
+              <InvertibleImage
+                alt="Security in-depth"
+                lightSrc="/static/images/aws-security-light.svg"
+                darkSrc="/static/images/aws-security-dark.svg"
+                className="object-fill object-center"
+                width={450}
+                height={350}
+              />
+            </div>
           </LandingSection>
           <LandingSection flexColDirection="flex-col-reverse">
-            <InvertibleImage
-              alt="AWS cost optimization"
-              lightSrc="/static/images/aws-cost-optimization-light.svg"
-              darkSrc="/static/images/aws-cost-optimization-dark.svg"
-              className="object-fill object-center"
-              width={350}
-              height={250}
-            />
+            <div className="flex flex-row justify-center xl:w-[45%]">
+              <InvertibleImage
+                alt="AWS cost optimization"
+                lightSrc="/static/images/aws-cost-optimization-light.svg"
+                darkSrc="/static/images/aws-cost-optimization-dark.svg"
+                className="object-fill object-center"
+                width={350}
+                height={250}
+              />
+            </div>
             <div className="flex flex-col gap-6 xl:w-[45%]">
               <LandingH2>Robust solutions that don't break the bank</LandingH2>
               <LandingParagraph>
@@ -149,44 +165,48 @@ export default function Home() {
           </LandingSection>
           <LandingSection flexColDirection="flex-col">
             <div className="flex flex-col gap-6 xl:w-[45%]">
-              <LandingH2>Start small. Scale indefinitely.</LandingH2>
+              <LandingH2>Start small. Scale instantly.</LandingH2>
               <LandingParagraph>
-                Resilient and scalable designs allow room for growth and can gracefully handle
-                sudden load spikes.
+                The worst outages happen during a demand surge. Resilient and scalable solutions
+                allow room for growth and can gracefully handle sudden load spikes.
               </LandingParagraph>
               <LandingParagraph>
                 At AWS, I built and operated event-driven services that autoscale to handle millions
-                of events and automatically release capacity when load subsides to avoid incurring
-                unnecessary costs.
+                of events per minute and automatically release capacity when load subsides to avoid
+                incurring unnecessary costs.
               </LandingParagraph>
               <LandingParagraph>
                 I will help you build resilient and scalable solutions that maintain business
-                continuity under unexpected load spikes.
+                continuity under unanticipated load spikes.
               </LandingParagraph>
             </div>
-            <InvertibleImage
-              alt="Security from the outset"
-              lightSrc="/static/images/aws-scale-light.svg"
-              darkSrc="/static/images/aws-scale-dark.svg"
-              className="object-fill object-center"
-              width={450}
-              height={350}
-            />
+            <div className="flex flex-row justify-center xl:w-[45%]">
+              <InvertibleImage
+                alt="Scalable designs"
+                lightSrc="/static/images/aws-scale-light.svg"
+                darkSrc="/static/images/aws-scale-dark.svg"
+                className="object-fill object-center"
+                width={450}
+                height={350}
+              />
+            </div>
           </LandingSection>
           <LandingSection flexColDirection="flex-col-reverse">
-            <InvertibleImage
-              alt="AWS operational excellence"
-              lightSrc="/static/images/aws-operational-excellence-light.svg"
-              darkSrc="/static/images/aws-operational-excellence-dark.svg"
-              className="object-fill object-center"
-              width={400}
-              height={400}
-            />
+            <div className="flex flex-row justify-center xl:w-[45%]">
+              <InvertibleImage
+                alt="AWS operational excellence"
+                lightSrc="/static/images/aws-operational-excellence-light.svg"
+                darkSrc="/static/images/aws-operational-excellence-dark.svg"
+                className="object-fill object-center"
+                width={400}
+                height={400}
+              />
+            </div>
             <div className="flex flex-col gap-6 xl:w-[45%]">
-              <LandingH2>Raise the bar on DevOps</LandingH2>
+              <LandingH2>Cultivate your DevOps culture</LandingH2>
               <LandingParagraph>
-                In-depth observability, continuous integration and delivery, alerts and automatic
-                rollbacks are crucial in an operationally-sound solution.
+                To iterate fast, you need systems in place to stop bad code from reaching production
+                and alert your team when your services are experiencing disruption.
               </LandingParagraph>
               <LandingParagraph>
                 At AWS, I built many microservices, with in-depth logging, monitoring and alerting.
@@ -198,43 +218,16 @@ export default function Home() {
                 I will help you build production-grade operationally-ready AWS solutions with
                 well-documented operational runbooks.
               </LandingParagraph>
+              <div className="flex flex-row justify-center xl:justify-start">
+                <ButtonLink className="w-44" href="#contact">
+                  Start building
+                </ButtonLink>
+              </div>
             </div>
           </LandingSection>
         </div>
         <div className="flex flex-col gap-6">
           <LandingH2 className="text-center xl:text-center">Reviews</LandingH2>
-          <Recommendation
-            author="Shane Pereira"
-            position="Former Principal Engineer"
-            company="AWS"
-            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-          >
-            Each application security related issue is unique, and requires someone with{' '}
-            <LandingEmphasis>
-              deep understanding of AWS, a cool disposition, high judgement, creativity, and
-              pragmatism
-            </LandingEmphasis>{' '}
-            to figure out where to set the security bar so as to ensure the right outcome for the
-            customer, and for Amazon. <LandingEmphasis>Haitham has this in spades</LandingEmphasis>!
-          </Recommendation>
-          <Recommendation
-            author="Wei Wang"
-            position="Engineering Manager"
-            company="AWS"
-            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
-          >
-            Haitham was the first engineer on the team to be{' '}
-            <LandingEmphasis>
-              certified as an AWS AppSec Guardian, which is a critical role given the risks involved
-            </LandingEmphasis>
-            . It requires a cool head, high judgement, the ability to chase a problem down by
-            navigating across several teams at Amazon, and{' '}
-            <LandingEmphasis>
-              the ability to clearly articulate and debate often highly contentious positions with
-              the most senior engineers at Amazon
-            </LandingEmphasis>
-            .
-          </Recommendation>
           <Recommendation
             author="Sunu Mathew"
             position="Senior Software Engineer"
@@ -287,6 +280,38 @@ export default function Home() {
             !
           </Recommendation>
           <Recommendation
+            author="Shane Pereira"
+            position="Former Principal Engineer"
+            company="AWS"
+            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+          >
+            Each application security related issue is unique, and requires someone with{' '}
+            <LandingEmphasis>
+              deep understanding of AWS, a cool disposition, high judgement, creativity, and
+              pragmatism
+            </LandingEmphasis>{' '}
+            to figure out where to set the security bar so as to ensure the right outcome for the
+            customer, and for Amazon. <LandingEmphasis>Haitham has this in spades</LandingEmphasis>!
+          </Recommendation>
+          <Recommendation
+            author="Wei Wang"
+            position="Engineering Manager"
+            company="AWS"
+            link="https://www.linkedin.com/in/haithamgad/details/recommendations"
+          >
+            Haitham was the first engineer on the team to be{' '}
+            <LandingEmphasis>
+              certified as an AWS AppSec Guardian, which is a critical role given the risks involved
+            </LandingEmphasis>
+            . It requires a cool head, high judgement, the ability to chase a problem down by
+            navigating across several teams at Amazon, and{' '}
+            <LandingEmphasis>
+              the ability to clearly articulate and debate often highly contentious positions with
+              the most senior engineers at Amazon
+            </LandingEmphasis>
+            .
+          </Recommendation>
+          <Recommendation
             author="Conor Lorsung"
             position="Software Development Engineer"
             company="AWS"
@@ -309,11 +334,13 @@ export default function Home() {
         </div>
         <div id="contact" className="flex flex-col gap-6">
           <LandingH2 className="text-center xl:text-center">Get in touch</LandingH2>
+          {/*
           <div className="align-center flex flex-row justify-center">
             <LandingParagraph className="flex w-80 flex-col xl:w-96">
               I typically respond within 1-2 business days.
             </LandingParagraph>
           </div>
+          */}
           <ContactForm />
         </div>
         {/*
