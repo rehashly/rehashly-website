@@ -12,11 +12,11 @@ const siteMetadata = {
   image: '/static/images/haitham.png',
   socialBanner: '/static/images/social-banner.png',
   email: 'hello@rehashly.com',
-  github: 'https://github.com/rehashly',
-  twitter: 'https://twitter.com/rehashly',
+  github: 'https://github.com/hgad',
+  twitter: 'https://twitter.com/hgad',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/company/rehashly',
+  linkedin: 'https://www.linkedin.com/in/haithamgad',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics, umami or googleAnalytics
