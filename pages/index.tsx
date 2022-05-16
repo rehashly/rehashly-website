@@ -82,7 +82,7 @@ export default function Home() {
                 <LandingParagraph>
                   I built and operated{' '}
                   <TextLink href="https://aws.amazon.com/guardduty/">
-                    an AWS security service
+                    an AWS threat detection service
                   </TextLink>{' '}
                   for more than 5 years and led many compliance efforts, AppSec reviews and SecOps
                   engagements.
