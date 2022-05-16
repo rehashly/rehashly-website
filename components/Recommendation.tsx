@@ -11,7 +11,7 @@ type RecommendationProps = {
 } & HTMLAttributes<HTMLParagraphElement>
 
 export function Recommendation(props: RecommendationProps): ReactElement<RecommendationProps> {
-  const { author, position, company, link, className, children, ...rest } = props
+  const { author, position, company, link, children } = props
 
   return (
     <div className="rounded-md border border-gray-300 p-6 shadow-lg dark:border-gray-600 dark:shadow-[0px_10px_15px_-3px_rgba(255,255,255,0.1),0px_4px_6px_-4px_rgba(255,255,255,0.1)]">
