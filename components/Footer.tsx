@@ -19,7 +19,7 @@ export function Footer() {
           <div>302 Washington St #150-4568</div>
           <div>San Diego, CA 92103</div>
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-4 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>
             <Link href="/privacy">Privacy Policy</Link> ⦁{' '}
             <Link href="/terms">Terms of Service</Link>
