@@ -24,17 +24,18 @@ export default function Privacy() {
 
       <LandingParagraph className="mb-8">
         This Policy is incorporated into and part of Rehashly Master Terms of Use (“Master Terms”)
-        located at https://rehashly.com/terms.
+        located at <TextLink href="https://rehashly.com/terms">https://rehashly.com/terms</TextLink>
+        .
       </LandingParagraph>
 
       <LandingParagraph className="mb-8">
         Unless otherwise noted on a particular website or service hosted by Rehashly, this Policy
         describes and governs the information collection, use, and sharing practices of Rehashly
-        with respect to your use of our websites that link to this Privacy Policy, including
-        https://rehashly.com and all of its subdomains (collectively, the “Websites”), and the
-        services we provide through our Websites and/or host on our servers, including the search
-        engine (collectively, the Websites, and the services available through them are referred to
-        as the “Services”).
+        with respect to your use of our websites that link to this Privacy Policy, including{' '}
+        <TextLink href="https://rehashly.com">https://rehashly.com</TextLink> and all of its
+        subdomains (collectively, the “Websites”), and the services we provide through our Websites
+        and/or host on our servers, including the search engine (collectively, the Websites, and the
+        services available through them are referred to as the “Services”).
       </LandingParagraph>
 
       <LandingParagraph className="mb-8">

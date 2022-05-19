@@ -21,8 +21,7 @@ export function Footer() {
         </div>
         <div className="mb-4 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>
-            <Link href="/privacy">Privacy Policy</Link> ⦁{' '}
-            <Link href="/terms">Terms of Service</Link>
+            <Link href="/privacy">Privacy Policy</Link> ⦁ <Link href="/terms">Terms of Use</Link>
           </div>
         </div>
       </div>
