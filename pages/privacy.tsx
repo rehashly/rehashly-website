@@ -4,6 +4,12 @@ import { PageSEO } from '@/components/SEO'
 import { TextLink } from '@/components/TextLink'
 import { siteMetadata } from '@/data/siteMetadata'
 
+declare global {
+  interface Window {
+    klaro: any
+  }
+}
+
 export default function Privacy() {
   return (
     <>
@@ -198,6 +204,17 @@ export default function Privacy() {
         <TextLink href="https://support.apple.com/kb/PH5042">Apple Safari</TextLink>). Please note
         that by blocking any or all cookies, you may not have access to certain features or
         offerings of the Services.
+      </LandingParagraph>
+
+      <LandingParagraph className="mb-8">
+        You can change your cookie consent setting by clicking{' '}
+        <TextLink
+          className="text-primary-500 hover:cursor-pointer"
+          onClick={() => window.klaro.show(siteMetadata.cookieConsent.klaroConfig, true)}
+        >
+          here
+        </TextLink>
+        .
       </LandingParagraph>
 
       <LandingH3 className="my-8">Information from Third Parties</LandingH3>
