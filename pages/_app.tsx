@@ -1,5 +1,6 @@
 import { Analytics } from '@/components/analytics'
 import { ClientReload } from '@/components/ClientReload'
+import { CookieConsent } from '@/components/cookie-consent'
 import { LayoutWrapper } from '@/components/LayoutWrapper'
 import '@/css/prism.css'
 import '@/css/tailwind.css'
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
+      <CookieConsent />
       <Analytics />
       <LayoutWrapper>
         <Component {...pageProps} />

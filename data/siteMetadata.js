@@ -72,6 +72,28 @@ const siteMetadata = {
       shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
     },
   },
+  cookieConsent: {
+    // Only supports klaro at the moment
+    provider: 'klaro',
+    klaroConfig: {
+      // https://heyklaro.com/docs/integration/annotated-configuration
+      htmlTexts: true,
+      acceptAll: false,
+      privacyPolicy: '/privacy',
+      services: [
+        {
+          name: 'google-analytics',
+          title: 'Google Analytics',
+          default: true,
+          purposes: ['analytics'],
+          cookies: [/^ga/i],
+        },
+      ],
+      callback: function (consent, service) {
+        console.log('User consent for service ' + service.name + ': consent=' + consent)
+      },
+    },
+  },
 }
 
 module.exports = { siteMetadata }

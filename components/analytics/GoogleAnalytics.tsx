@@ -7,9 +7,18 @@ export function GoogleAnalytics() {
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${siteMetadata.analytics.googleAnalyticsId}`}
+        type="text/plain"
+        data-type="application/javascript"
+        data-name="google-analytics"
       />
 
-      <Script strategy="lazyOnload" id="ga-script">
+      <Script
+        strategy="lazyOnload"
+        id="ga-script"
+        type="text/plain"
+        data-type="application/javascript"
+        data-name="google-analytics"
+      >
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

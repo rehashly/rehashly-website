@@ -23,6 +23,7 @@
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.3",
     "image-size": "1.0.1",
+    "klaro": "^0.7.18",
     "mdx-bundler": "^9.0.0",
     "next": "12.1.5",
     "next-themes": "^0.1.1",
@@ -49,7 +50,6 @@
   "devDependencies": {
     "@next/bundle-analyzer": "12.1.5",
     "@svgr/webpack": "^6.2.1",
-    "@types/email-validator": "^1.0.6",
     "@types/nodemailer": "^6.4.4",
     "@types/react": "^17.0.14",
     "@types/tailwindcss": "^3.0.10",
