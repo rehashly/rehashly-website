@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { LandingH1, LandingH2, LandingH3 } from '@/components/LandingHeading'
 import { LandingParagraph } from '@/components/LandingParagraph'
 import { PageSEO } from '@/components/SEO'
@@ -224,7 +225,7 @@ export default function Privacy() {
         permitted by law, we may also collect information from third parties, including public
         sources, social media platforms, and marketing and market research firms. Depending on the
         source, this information collected from third parties could include name, contact
-        information, demographic information, information about an individual’s employer,
+        information, demographic information, information about an individual's employer,
         information to verify identity or trustworthiness, and information for other fraud or safety
         protection purposes.
       </LandingParagraph>
@@ -321,7 +322,7 @@ export default function Privacy() {
             <span className="font-bold">Business Transfers.</span> As we continue to develop our
             business, we may engage in certain business transactions, such as the transfer or sale
             of our assets. In such transactions, (including in contemplation of such transactions,
-            e.g., due diligence) your information may be disclosed. If any of Rehashly’s assets are
+            e.g., due diligence) your information may be disclosed. If any of Rehashly's assets are
             sold or transferred to a third party, customer information (including your email
             address) would likely be one of the transferred business assets.
           </li>
@@ -534,7 +535,7 @@ export default function Privacy() {
       <LandingParagraph className="mb-8">
         The Services are intended for users over the age of 18 and are not directed at children
         under the age of 13. If we become aware that we have collected personal information (as
-        defined by the Children’s Online Privacy Protection Act) from children under the age of 13,
+        defined by the Children's Online Privacy Protection Act) from children under the age of 13,
         or personal data (as defined by the EU GDPR) from children under the age of 16, we will take
         reasonable steps to delete it as soon as practicable.
       </LandingParagraph>
