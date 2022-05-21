@@ -82,6 +82,14 @@ const siteMetadata = {
       privacyPolicy: '/privacy',
       services: [
         {
+          name: 'recaptcha',
+          title: 'reCAPTCHA',
+          default: true,
+          required: true,
+          purposes: ['security'],
+          cookies: [/^.*/i],
+        },
+        {
           name: 'google-analytics',
           title: 'Google Analytics',
           default: true,

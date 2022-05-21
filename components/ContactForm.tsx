@@ -1,6 +1,14 @@
 import { Button } from '@/components/Button'
 import { Image } from '@/components/Image'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+
+declare global {
+  interface Window {
+    grecaptch: any
+  }
+}
+
+const RECAPTCHA_SITE_KEY = '6LfErAcgAAAAAO4DeWyeiH7nE2CVlL1wPbJKVUxp'
 
 export function ContactForm() {
   const nameInputEl = useRef<HTMLInputElement>(null)
@@ -11,39 +19,75 @@ export function ContactForm() {
   const [messageSent, setMessageSent] = useState(false)
   const [ackMessage, setAckMessage] = useState('')
 
-  const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setSendingMessage(true)
+  useEffect(() => {
+    const loadScriptByURL = (id, url, callback) => {
+      const scriptExists = document.getElementById(id)
 
-    const res = await fetch(`/api/contact/nodemailer`, {
-      body: JSON.stringify({
-        name: nameInputEl.current.value,
-        email: emailInputEl.current.value,
-        message: messageInputEl.current.value,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    })
+      if (!scriptExists) {
+        const script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = url
+        script.id = id
+        script.onload = function () {
+          if (callback) callback()
+        }
 
-    const { error } = await res.json()
-    if (error) {
-      setError(true)
-      setSendingMessage(false)
-      setMessageSent(false)
-      setAckMessage(error)
-      return
+        document.body.appendChild(script)
+      }
+
+      if (scriptExists && callback) callback()
     }
 
-    nameInputEl.current.value = ''
-    emailInputEl.current.value = ''
-    messageInputEl.current.value = ''
+    // load the script by passing the URL
+    loadScriptByURL(
+      'recaptcha-script',
+      `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`,
+      function () {
+        console.info('reCAPTCHAv3 script loaded.')
+      }
+    )
+  }, [])
 
-    setError(false)
-    setSendingMessage(false)
-    setMessageSent(true)
-    setAckMessage('Message received. Will get back to you soon. Thank you!')
+  const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    window.grecaptcha.ready(function () {
+      window.grecaptcha
+        .execute(RECAPTCHA_SITE_KEY, { action: 'submit' })
+        .then(async function (recaptchaToken) {
+          setSendingMessage(true)
+
+          const res = await fetch(`/api/contact/nodemailer`, {
+            body: JSON.stringify({
+              name: nameInputEl.current.value,
+              email: emailInputEl.current.value,
+              message: messageInputEl.current.value,
+              recaptchaToken,
+            }),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            method: 'POST',
+          })
+
+          const { error } = await res.json()
+          if (error) {
+            setError(true)
+            setSendingMessage(false)
+            setMessageSent(false)
+            setAckMessage(error)
+            return
+          }
+
+          nameInputEl.current.value = ''
+          emailInputEl.current.value = ''
+          messageInputEl.current.value = ''
+
+          setError(false)
+          setSendingMessage(false)
+          setMessageSent(true)
+          setAckMessage('Message received. Will get back to you soon. Thank you!')
+        })
+    })
   }
 
   return (

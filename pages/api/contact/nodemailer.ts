@@ -1,10 +1,39 @@
+import axios from 'axios'
 import * as validator from 'email-validator'
 import { NextApiRequest, NextApiResponse } from 'next'
 import * as nodemailer from 'nodemailer'
 
+type ValidateReCaptchaTokenResponse = {
+  success: boolean
+  challenge_ts: string
+  hostname: string
+  'error-codes': string[]
+}
+
+const RECAPTCHA_VALIDATION_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify'
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { name, email, message } = req.body
+  const { name, email, message, recaptchaToken } = req.body
+  // Fail silently if there's not recaptchaToken
+  if (!recaptchaToken) {
+    return res.status(201).json({ error: '' })
+  }
+
+  const { data: recaptchaVerificationResponse } = await axios.post<ValidateReCaptchaTokenResponse>(
+    RECAPTCHA_VALIDATION_ENDPOINT,
+    {
+      secret: process.env.RECAPTCHA_SECRET_KEY,
+      response: recaptchaToken,
+      remoteip: req.socket.remoteAddress,
+    }
+  )
+
+  // Fail silently if reCAPTCHA validation fails
+  if (!recaptchaVerificationResponse.success) {
+    return res.status(201).json({ error: '' })
+  }
+
   if (!name) {
     return res.status(400).json({ error: 'Name is required' })
   }
