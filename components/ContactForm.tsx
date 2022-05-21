@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from '@/components/Button'
 import { Image } from '@/components/Image'
+import { TextLink } from '@/components/TextLink'
 import React, { useEffect, useRef, useState } from 'react'
 
 declare global {
@@ -146,6 +147,13 @@ export function ContactForm() {
             'Submit'
           )}
         </Button>
+        <div className="mb-4 flex flex-row space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <div>
+            This website is protected by reCAPTCHA and Google's{' '}
+            <TextLink href="/terms">Terms of Service</TextLink> and{' '}
+            <TextLink href="/privacy">Privacy Policy</TextLink> apply.
+          </div>
+        </div>
         {(messageSent || error) && (
           <div
             className={`w-72 text-sm sm:w-96 ${

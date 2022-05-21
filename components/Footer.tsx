@@ -1,5 +1,6 @@
 import { Link } from '@/components/Link'
 import { SocialIcon } from '@/components/social-icons'
+import { TextLink } from '@/components/TextLink'
 import { siteMetadata } from '@/data/siteMetadata'
 
 export function Footer() {
@@ -19,9 +20,10 @@ export function Footer() {
           <div>302 Washington St #150-4568</div>
           <div>San Diego, CA 92103</div>
         </div>
-        <div className="mb-4 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-4 flex flex-row space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>
-            <Link href="/terms">Terms of Use</Link> ⦁ <Link href="/privacy">Privacy Policy</Link>
+            <TextLink href="/terms">Terms of Use</TextLink> ⦁{' '}
+            <TextLink href="/privacy">Privacy Policy</TextLink>
           </div>
         </div>
       </div>
