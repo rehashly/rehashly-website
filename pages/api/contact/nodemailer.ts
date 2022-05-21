@@ -17,7 +17,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { name, email, message, recaptchaToken } = req.body
   // Fail silently if there's not recaptchaToken
   if (!recaptchaToken) {
-    console.log('Recaptcha token not present')
     return res.status(201).json({ error: '' })
   }
 
@@ -32,7 +31,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   // Fail silently if reCAPTCHA validation fails
   if (!recaptchaVerificationResponse.success) {
-    console.log('Recaptcha validation unsuccessful')
+    console.log(recaptchaVerificationResponse)
     return res.status(201).json({ error: '' })
   }
 
