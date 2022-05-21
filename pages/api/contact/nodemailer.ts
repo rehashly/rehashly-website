@@ -31,7 +31,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   // Fail silently if reCAPTCHA validation fails
   if (!recaptchaVerificationResponse.success) {
-    console.log(recaptchaVerificationResponse)
     return res.status(201).json({ error: '' })
   }
 
