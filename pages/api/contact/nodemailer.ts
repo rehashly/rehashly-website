@@ -22,16 +22,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const { data: recaptchaVerificationResponse } = await axios.post<ValidateReCaptchaTokenResponse>(
     RECAPTCHA_VALIDATION_ENDPOINT,
+    `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}&remoteip=${req.socket.remoteAddress}`,
     {
-      secret: process.env.RECAPTCHA_SECRET_KEY,
-      response: recaptchaToken,
-      remoteip: req.socket.remoteAddress,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Accept: 'application/json',
+      },
     }
   )
 
   // Fail silently if reCAPTCHA validation fails
   if (!recaptchaVerificationResponse.success) {
-    console.log(recaptchaVerificationResponse)
     return res.status(201).json({ error: '' })
   }
 
