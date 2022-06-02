@@ -79,6 +79,7 @@ const siteMetadata = {
       // https://heyklaro.com/docs/integration/annotated-configuration
       htmlTexts: true,
       acceptAll: false,
+      hideDeclineAll: true,
       privacyPolicy: '/privacy',
       services: [
         {
