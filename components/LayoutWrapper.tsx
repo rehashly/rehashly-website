@@ -1,5 +1,5 @@
 import { Footer } from '@/components/Footer'
-import { InvertibleImage } from '@/components/InvertibleImage'
+import { Image } from '@/components/Image'
 import { Link } from '@/components/Link'
 import { MobileNav } from '@/components/MobileNav'
 import { SectionContainer } from '@/components/SectionContainer'
@@ -18,22 +18,7 @@ export function LayoutWrapper({ children }: LayoutWrapperProps): ReactElement<La
         <header className="flex items-center justify-between py-6">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
-                <InvertibleImage
-                  className="mr-2"
-                  lightSrc="/static/images/logo-light.svg"
-                  darkSrc="/static/images/logo-dark.svg"
-                  width={150}
-                  height={70}
-                />
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
-              </div>
+              <Image src="/static/images/logo.svg" width={150} height={70} />
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">

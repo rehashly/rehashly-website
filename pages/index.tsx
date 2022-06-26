@@ -1,7 +1,6 @@
 import { ButtonLink } from '@/components/ButtonLink'
 import { ContactForm } from '@/components/ContactForm'
 import { Image } from '@/components/Image'
-import { InvertibleImage } from '@/components/InvertibleImage'
 import { LandingEmphasis } from '@/components/LandingEmphasis'
 import { LandingH1, LandingH2, LandingH3 } from '@/components/LandingHeading'
 import { LandingParagraph } from '@/components/LandingParagraph'
@@ -31,10 +30,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-row justify-center xl:w-[45%]">
-              <InvertibleImage
+              <Image
                 alt="Well-architected AWS solutions."
-                lightSrc="/static/images/hero-light.svg"
-                darkSrc="/static/images/hero-dark.svg"
+                src="/static/images/hero.svg"
                 className="max-w-full object-fill object-center"
                 width={450}
                 height={410}
@@ -123,10 +121,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-row justify-center xl:w-[45%]">
-              <InvertibleImage
+              <Image
                 alt="Security in-depth"
-                lightSrc="/static/images/aws-security-light.svg"
-                darkSrc="/static/images/aws-security-dark.svg"
+                src="/static/images/aws-security.svg"
                 className="object-fill object-center"
                 width={450}
                 height={350}
@@ -135,10 +132,9 @@ export default function Home() {
           </LandingSection>
           <LandingSection flexColDirection="flex-col-reverse">
             <div className="flex flex-row justify-center xl:w-[45%]">
-              <InvertibleImage
+              <Image
                 alt="AWS cost optimization"
-                lightSrc="/static/images/aws-cost-optimization-light.svg"
-                darkSrc="/static/images/aws-cost-optimization-dark.svg"
+                src="/static/images/aws-cost-optimization.svg"
                 className="object-fill object-center"
                 width={350}
                 height={250}
@@ -181,10 +177,9 @@ export default function Home() {
               </LandingParagraph>
             </div>
             <div className="flex flex-row justify-center xl:w-[45%]">
-              <InvertibleImage
+              <Image
                 alt="Scalable designs"
-                lightSrc="/static/images/aws-scale-light.svg"
-                darkSrc="/static/images/aws-scale-dark.svg"
+                src="/static/images/aws-scale.svg"
                 className="object-fill object-center"
                 width={450}
                 height={350}
@@ -193,10 +188,9 @@ export default function Home() {
           </LandingSection>
           <LandingSection flexColDirection="flex-col-reverse">
             <div className="flex flex-row justify-center xl:w-[45%]">
-              <InvertibleImage
+              <Image
                 alt="AWS operational excellence"
-                lightSrc="/static/images/aws-operational-excellence-light.svg"
-                darkSrc="/static/images/aws-operational-excellence-dark.svg"
+                src="/static/images/aws-operational-excellence.svg"
                 className="object-fill object-center"
                 width={400}
                 height={400}
