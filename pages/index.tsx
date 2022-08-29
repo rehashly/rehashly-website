@@ -18,7 +18,7 @@ export default function Home() {
         <div className="mt-[12vh] flex flex-col gap-48 xl:mt-[20vh] xl:gap-72">
           <LandingSection flexColDirection="flex-col">
             <div className="flex flex-col gap-8 xl:w-[45%]">
-              <LandingH1>Build AWS solutions the way AWS does it.</LandingH1>
+              <LandingH1>Ship well-architected AWS solutions, fast.</LandingH1>
               <LandingParagraph className="text-center">
                 Get help building resilient, secure and cost-optimized AWS solutions from an ex-AWS
                 engineer.
@@ -52,17 +52,17 @@ export default function Home() {
             <div className="flex flex-col gap-6 xl:w-[45%]">
               <LandingH2 id="about">About me</LandingH2>
               <LandingParagraph>
-                Hi there 👋 , this is Haitham Gad. I've been building software for the past 15+
-                years.
-              </LandingParagraph>
-              <LandingParagraph>
-                I spent 5+ years at AWS building and operating AWS services with strong requirements
-                on security, reliability, scalability and operational excellence.
+                Haitham is a senior software engineer with over 15 years of experience building
+                products and services for several enterprises. Before starting his own cloud
+                consultancy, Haitham spent over 5 years with AWS, where he helped build Amazon
+                GuardDuty, AWS's intelligent threat detection service. His work on the service was
+                instrumental in accelerating the adoption of GuardDuty by thousands of AWS customers
+                like Snap, HBO Max, Siemens, Volkswagen and Southwest Airlines.
               </LandingParagraph>
               <LandingParagraph className="mb-0">
-                I started Rehashly to help businesses deliver value quickly, reduce their
-                infrastructure costs, improve their security posture and achieve operational
-                excellence by utilizing the right mix of AWS technologies.
+                Haitham helps businesses deliver value quickly, reduce infrastructure costs, improve
+                security posture and achieve operational excellence by utilizing the right mix of
+                AWS technologies.
               </LandingParagraph>
             </div>
           </LandingSection>
@@ -78,25 +78,27 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <LandingH3>Builder with a security focus</LandingH3>
                 <LandingParagraph>
-                  I built and operated{' '}
+                  Haitham built and operated{' '}
                   <TextLink href="https://aws.amazon.com/guardduty/">
-                    an AWS threat detection service
+                    an AWS security service
                   </TextLink>{' '}
-                  for more than 5 years and led many compliance efforts, AppSec reviews and SecOps
+                  for over 5 years and led many compliance efforts, AppSec reviews and SecOps
                   engagements.
                 </LandingParagraph>
               </div>
               <div className="flex flex-col gap-1">
                 <LandingH3>Threat modeling expert</LandingH3>
                 <LandingParagraph>
-                  I led numerous AppSec reviews, wrote and reviewed many threat models and worked
-                  closely with AppSec teams to mitigate the most subtle and intricate AWS attack
-                  vectors.
+                  Haitham led numerous AppSec reviews, wrote and reviewed dozens of threat models
+                  and worked closely with AppSec teams to mitigate the most subtle and intricate AWS
+                  attack vectors.
                 </LandingParagraph>
               </div>
               <div className="flex flex-col gap-1">
                 <LandingH3>Certified security specialist</LandingH3>
-                <LandingParagraph>I'm certified by AWS in the security specialty.</LandingParagraph>
+                <LandingParagraph>
+                  Haitham is an AWS certified security specialtist.
+                </LandingParagraph>
                 <LandingParagraph className="mt-6 text-center xl:text-center">
                   <TextLink href="https://www.credly.com/badges/30af2643-74ed-4251-9f38-fed8f952d834">
                     <Image
@@ -110,7 +112,7 @@ export default function Home() {
                 </LandingParagraph>
               </div>
               <LandingParagraph>
-                I will help you build solutions that protect your sensitive data at rest and in
+                Haitham helps businesses build solutions that protect sensitive data at rest and in
                 transit, enforce least privilege access to resources, and ensure proper handling of
                 untrusted user input.
               </LandingParagraph>
@@ -150,12 +152,13 @@ export default function Home() {
                 .
               </LandingParagraph>
               <LandingParagraph>
-                At AWS, I helped reduce infrastructure spend, at times by more than $60K/month by
-                leveraging serverless architectures and optimizing compute and network egress costs.
+                At AWS, Haitham helped reduce infrastructure spend, at times by more than $60K/month
+                by leveraging serverless architectures and optimizing compute and network egress
+                costs.
               </LandingParagraph>
               <LandingParagraph>
-                I will help you build robust cost-optimized solutions that scale gracefully in terms
-                of cost.
+                Haitham helps businesses build robust cost-optimized solutions that scale gracefully
+                in terms of cost.
               </LandingParagraph>
             </div>
           </LandingSection>
@@ -167,13 +170,13 @@ export default function Home() {
                 allow room for growth and can gracefully handle sudden load spikes.
               </LandingParagraph>
               <LandingParagraph>
-                At AWS, I built and operated event-driven services that autoscale to handle millions
+                Haitham built and operated event-driven services that autoscale to handle millions
                 of events per minute and automatically release capacity when load subsides to avoid
                 incurring unnecessary costs.
               </LandingParagraph>
               <LandingParagraph>
-                I will help you build resilient and scalable solutions that maintain business
-                continuity under unanticipated load spikes.
+                Haitham helps businesses build resilient and scalable solutions that maintain
+                business continuity under unanticipated load spikes.
               </LandingParagraph>
             </div>
             <div className="flex flex-row justify-center xl:w-[45%]">
@@ -199,18 +202,18 @@ export default function Home() {
             <div className="flex flex-col gap-6 xl:w-[45%]">
               <LandingH2>Cultivate your DevOps culture</LandingH2>
               <LandingParagraph>
-                To iterate fast, you need systems and processes in place to stop bad code from
-                reaching production and alert your team when your services are experiencing
+                To iterate fast, businesses need systems and processes in place to stop bad code
+                from reaching production and alert their team when your services are experiencing
                 disruption.
               </LandingParagraph>
               <LandingParagraph>
-                At AWS, I built many microservices, with in-depth logging, monitoring and alerting.
-                I wrote plenty of unit tests, integration tests, canary tests and runbooks, and
-                built many CI/CD deployment pipelines with continuous monitoring and automatic
-                rollbacks.
+                Haitham built dozens of microservices, with in-depth logging, monitoring and
+                alerting. He wrote numerous unit tests, integration tests, canary tests and
+                runbooks, and built many CI/CD deployment pipelines with continuous monitoring and
+                automatic rollbacks.
               </LandingParagraph>
               <LandingParagraph className="mb-0">
-                I will educate your team on DevOps best practices and help you build
+                Haitham will educate your team on DevOps best practices and help you build
                 production-grade operationally-ready AWS solutions with well-documented operational
                 runbooks.
               </LandingParagraph>
