@@ -18,7 +18,7 @@ export function LayoutWrapper({ children }: LayoutWrapperProps): ReactElement<La
         <header className="flex items-center justify-between py-6">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <Image src="/static/images/logo.svg" width={150} height={70} />
+              <Image src="/static/images/logo.png" width={170} height={70} />
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
