@@ -50,7 +50,7 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col gap-6 xl:w-[45%]">
-              <LandingH2 id="about">About me</LandingH2>
+              <LandingH2 id="about">About</LandingH2>
               <LandingParagraph>
                 Haitham is a senior software engineer with over 15 years of experience building
                 products and services for several enterprises. Before starting his own cloud
