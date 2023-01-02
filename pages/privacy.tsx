@@ -26,7 +26,7 @@ export default function Privacy() {
 
       <LandingParagraph className="mb-8">
         This Privacy Policy (“Policy”) explains the information collection, use, and sharing
-        practices of Rehashly, LLC (“Rehashly,” “we,” “us,” and “our”).
+        practices of Rehashly, Inc (“Rehashly,” “we,” “us,” and “our”).
       </LandingParagraph>
 
       <LandingParagraph className="mb-8">

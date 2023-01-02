@@ -21,7 +21,7 @@ export default function Terms() {
       <LandingParagraph className="mb-8">
         Master terms: Welcome, and thank you for your interest in Rehashly (“Rehashly,” “we,” “our,”
         or “us”). Unless otherwise noted on a particular site or service, these master terms of use
-        (“Master Terms”) apply to your use of all of the websites that Rehashly, LLC operates. These
+        (“Master Terms”) apply to your use of all of the websites that Rehashly, Inc operates. These
         include <TextLink href="/">https://rehashly.com</TextLink> and all of its subdomains,
         (collectively, the “Websites”). The Master Terms also apply to all products, information,
         and services provided through the Websites, including without limitation the search engine,
