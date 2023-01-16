@@ -1,5 +1,4 @@
 import { ButtonLink } from '@/components/ButtonLink'
-import { ContactForm } from '@/components/ContactForm'
 import { Image } from '@/components/Image'
 import { LandingEmphasis } from '@/components/LandingEmphasis'
 import { LandingH1, LandingH2, LandingH3 } from '@/components/LandingHeading'
@@ -332,21 +331,14 @@ export default function Home() {
           </Recommendation>
         </div>
         <div id="contact" className="flex flex-col gap-6">
-          <LandingH2 className="text-center xl:text-center">Get in touch</LandingH2>
-          {/*
+          <LandingH2 className="text-center xl:text-center">Contact</LandingH2>
           <div className="align-center flex flex-row justify-center">
-            <LandingParagraph className="flex w-80 flex-col xl:w-96">
-              I typically respond within 1-2 business days.
+            <LandingParagraph className="flex flex-col">
+              To get in touch, please reach out to me at{' '}
+              <TextLink href="mailto:info@rehashly.com">info@rehashly.com</TextLink>
             </LandingParagraph>
           </div>
-          */}
-          <ContactForm />
         </div>
-        {/*
-        <div className="flex items-center justify-center pt-20">
-          <NewsletterForm title="Subscribe for practical advice on securing your data and workloads on AWS" />
-        </div>
-        */}
       </div>
     </>
   )
