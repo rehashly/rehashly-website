@@ -59,7 +59,7 @@ export default function Home() {
                 like Snap, HBO Max, Siemens, Volkswagen and Southwest Airlines.
               </LandingParagraph>
               <LandingParagraph className="mb-0">
-                Haitham helps businesses deliver value quickly, reduce infrastructure costs, improve
+                We help businesses deliver value quickly, reduce infrastructure costs, improve
                 security posture and achieve operational excellence by utilizing the right mix of
                 AWS technologies.
               </LandingParagraph>
@@ -111,7 +111,7 @@ export default function Home() {
                 </LandingParagraph>
               </div>
               <LandingParagraph>
-                Haitham helps businesses build solutions that protect sensitive data at rest and in
+                We help businesses build solutions that protect sensitive data at rest and in
                 transit, enforce least privilege access to resources, and ensure proper handling of
                 untrusted user input.
               </LandingParagraph>
@@ -156,7 +156,7 @@ export default function Home() {
                 costs.
               </LandingParagraph>
               <LandingParagraph>
-                Haitham helps businesses build robust cost-optimized solutions that scale gracefully
+                We help businesses build robust cost-optimized solutions that scale gracefully
                 in terms of cost.
               </LandingParagraph>
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
                 incurring unnecessary costs.
               </LandingParagraph>
               <LandingParagraph>
-                Haitham helps businesses build resilient and scalable solutions that maintain
+                We help businesses build resilient and scalable solutions that maintain
                 business continuity under unanticipated load spikes.
               </LandingParagraph>
             </div>
@@ -212,7 +212,7 @@ export default function Home() {
                 automatic rollbacks.
               </LandingParagraph>
               <LandingParagraph className="mb-0">
-                Haitham will educate your team on DevOps best practices and help you build
+                We will educate your team on DevOps best practices and help you build
                 production-grade operationally-ready AWS solutions with well-documented operational
                 runbooks.
               </LandingParagraph>
@@ -334,7 +334,7 @@ export default function Home() {
           <LandingH2 className="text-center xl:text-center">Contact</LandingH2>
           <div className="align-center flex flex-row justify-center">
             <LandingParagraph className="flex flex-col">
-              To get in touch, please reach out to me at{' '}
+              To get in touch, please reach out at{' '}
               <TextLink href="mailto:info@rehashly.com">info@rehashly.com</TextLink>
             </LandingParagraph>
           </div>
