@@ -156,8 +156,8 @@ export default function Home() {
                 costs.
               </LandingParagraph>
               <LandingParagraph>
-                We help businesses build robust cost-optimized solutions that scale gracefully
-                in terms of cost.
+                We help businesses build robust cost-optimized solutions that scale gracefully in
+                terms of cost.
               </LandingParagraph>
             </div>
           </LandingSection>
@@ -174,8 +174,8 @@ export default function Home() {
                 incurring unnecessary costs.
               </LandingParagraph>
               <LandingParagraph>
-                We help businesses build resilient and scalable solutions that maintain
-                business continuity under unanticipated load spikes.
+                We help businesses build resilient and scalable solutions that maintain business
+                continuity under unanticipated load spikes.
               </LandingParagraph>
             </div>
             <div className="flex flex-row justify-center xl:w-[45%]">
