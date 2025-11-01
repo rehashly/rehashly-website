@@ -72,10 +72,10 @@ export async function getFileBySlug(type: 'authors' | 'blog', slug: string | str
         [remarkTocHeadings, { exportRef: toc }],
         remarkGfm,
         remarkCodeTitles,
-        [remarkFootnotes, { inlineNotes: true }],
+        [remarkFootnotes as any, { inlineNotes: true }],
         remarkMath,
         remarkImgToJsx,
-      ]
+      ] as any
       options.rehypePlugins = [
         ...(options.rehypePlugins ?? []),
         rehypeSlug,

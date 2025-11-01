@@ -4,7 +4,7 @@ import { Link } from '@/components/Link'
 import { BlogNewsletterForm } from '@/components/NewsletterForm'
 import { Pre } from '@/components/Pre'
 import { TOCInline } from '@/components/TOCInline'
-import { ComponentMap, getMDXComponent } from 'mdx-bundler/client'
+import { getMDXComponent } from 'mdx-bundler/client'
 import React, { useMemo } from 'react'
 
 const Wrapper: React.ComponentType<{ layout: string }> = ({ layout, ...rest }) => {
@@ -12,7 +12,7 @@ const Wrapper: React.ComponentType<{ layout: string }> = ({ layout, ...rest }) =
   return <Layout {...rest} />
 }
 
-export const MDXComponents: ComponentMap = {
+export const MDXComponents: Record<string, React.ComponentType<any>> = {
   Image,
   //@ts-ignore
   TOCInline,
